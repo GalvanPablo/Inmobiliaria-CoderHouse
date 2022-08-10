@@ -389,7 +389,7 @@ ul, ol{
     margin: 0 auto;
     
     height: min-content;
-    padding: 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     border: none;
 
@@ -399,6 +399,9 @@ ul, ol{
 
     background-color: #232323;
     cursor: pointer;
+}
+.donde-encontrarnos__btn:hover{
+    background-color: #444444;
 }
 @media (min-width: 768px){
     .donde-encontrarnos{
@@ -469,7 +472,8 @@ ul, ol{
 }
 .filtro__btn:hover{
     background: #d3c3a2;
-    transition: 250ms background ease-in;
+    border: 1px solid black;
+    transition: 250ms ease-in;
 }
 .filtro__buscar,
 .filtro__tipo,
@@ -479,9 +483,9 @@ ul, ol{
     padding: 5px;
     background-color: #cecece;
     border-radius: 2px;
-    border: none;
+    border: 1px solid #00000000;
     outline: none;
-    transition: 250ms background ease-in;
+    transition: 250ms ease-in;
 }
 
 .filtro__buscar:focus,
@@ -489,8 +493,16 @@ ul, ol{
 .filtro__precio:focus,
 .filtro__orden:focus{
     background-color: #d3c3a2;
-    transition: 250ms background ease-in;
+    transition: 250ms ease-in;
 }
+.filtro__buscar:hover,
+.filtro__tipo:hover,
+.filtro__precio:hover,
+.filtro__orden:hover{
+    border: 1px solid black;
+    /* transition: 250ms background ease-in; */
+}
+
 
 .filtro__info{
     margin: 20px 0 5px 0;
@@ -709,6 +721,15 @@ ul, ol{
     padding: .5rem;
     transition: 250ms background ease-in;
 }
+.form__txtbox:hover,
+.form__txt:hover,
+.form__cbox:hover{
+    background-color: #cecece4d;
+}
+.form__cbox__option{
+    background-color: #cecece21;
+    color: black;
+}
 .form__txtbox:focus,
 .form__txt:focus{
     background: #cececea6;
@@ -717,6 +738,10 @@ ul, ol{
 }
 .form__btn{
     background-color: #a1a1a186;
+    cursor: pointer;
+}
+.form__btn:hover{
+    background-color: #cececea6;
 }
 /* --- Footer para pagina con formularios --- */
 .footer-redes{
