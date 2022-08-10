@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alquiler de Propiedades | Urb4n</title>
+    <link rel="shortcut icon" href="../images/brand/favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container" id="nav">
+            <a href="../../index.html" class="nav__logo"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav__logo__img"></a>
+            <ul class="nav__links">
+                <li class="nav__item"><a href="../../index.html" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="./comprar.html" class="nav__link">Comprar</a></li>
+                <li class="nav__item nav__item--acive"><a href="./alquilar.html" class="nav__link">Alquilar</a></li>
+                <li class="nav__item"><a href="./vender.html" class="nav__link">Vender</a></li>
+                <li class="nav__item"><a href="./contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+            <a href="#nav" class="nav__hamburger"><i class="bi-list"></i></a>
+            <a href="#" class="nav__close"><i class="bi-x-lg"></i></a>
+        </nav>
+    </header>
+    <main class="main main--propiedades">
+        <div class="propiedades container">
+            <h1 class="propiedades__titulo">Propiedades en alquiler</h1>
+
+            <div class="propiedades__filtro">
+                <input type="search" name="buscar" id="buscar" placeholder="Buscar" class="filtro__buscar">
+                <select name="tipo-propiedad" id="tipo-propiedad" class="filtro__tipo">
+                    <option value="tipo-casa">Casa</option>
+                    <option value="tipo-departamento">Departamento</option>
+                    <option value="tipo-Cochera">Cochera</option>
+                    <option value="tipo-local">Local</option>
+                    <option value="tipo-oficina">Oficina</option>
+                    <option value="tipo-consultorio">Consultorio</option>
+                    <option value="tipo-quinta">Quinta</option>
+                    <option value="tipo-galpón">Galpón</option>
+                    <option value="tipo-deposito">Deposito</option>
+                    <option value="tipo-edificio">Edificio</option>
+                </select>
+                <select name="precio" id="precio" class="filtro__precio">
+                    <option value="precio-1">Hasta 50.000 USD</option>
+                    <option value="precio-2">Hasta 100.000 USD</option>
+                    <option value="precio-3">Hasta 150.000 USD</option>
+                    <option value="precio-4">Hasta 200.000 USD</option>
+                    <option value="precio-5">Mas de 200.000 USD</option>
+                </select>
+                <select name="tipo-orden" id="tipo-orden" class="filtro__orden">
+                    <option value="tipo-menor">Menor precio</option>
+                    <option value="tipo-mayor">Mayor precio</option>
+                </select>
+                <button class="filtro__btn"><i class="bi-funnel-fill"></i>Filtrar</button>
+
+                <p class="filtro__info"><span>3</span> resultados encontrados</p>
+            </div>
+
+            <div class="propiedades__wrapper">
+                <div class="propiedad">
+                    <img src="../images/propiedades/en_alquiler/propiedad1.webp" alt="Propiedad 1" class="propiedad__img">
+                    <div class="propiedad__datos">
+                        <p class="propiedad__descripcion"> Departamento monoambiente en alquiler en Aristóbulo Del Valle 400, Lanus Oeste, Lanus, Lanus, Buenos Aires </p>
+                        <div class="propiedad__valor">
+                            <p class="propiedad__precio">37.000 ARS</p>
+                            <p class="propiedad__expensas">+ 4.000 ARS expensas</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>36</span> m² totales</p>
+                            <p><span>32</span> m² cubiertos</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>1</span> ambiente</p>
+                            <p><span>1</span> baño</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="propiedad">
+                    <img src="../images/propiedades/en_alquiler/propiedad2.webp" alt="Propiedad 2" class="propiedad__img">
+                    <div class="propiedad__datos">
+                        <p class="propiedad__descripcion"> Local en alquiler en Av. Eva Peron 2300, Parque Chacabuco, Capital Federal </p>
+                        <div class="propiedad__valor">
+                            <p class="propiedad__precio">95.000 USD</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>108.92</span> m² totales</p>
+                            <p><span>108.92</span> m² cubiertos</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>1</span> baño</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="propiedad">
+                    <img src="../images/propiedades/en_alquiler/propiedad3.webp" alt="Propiedad 3" class="propiedad__img">
+                    <div class="propiedad__datos">
+                        <p class="propiedad__descripcion"> Departamento en alquiler en Avenida San Isidro Labrador 4400, Saavedra, Capital Federal </p>
+                        <div class="propiedad__valor">
+                            <p class="propiedad__precio">165.000 ARS</p>
+                            <p class="propiedad__expensas">+ 13.000 ARS expensas</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>108.39</span> m² totales</p>
+                            <p><span>75</span> m² cubiertos</p>
+                        </div>
+                        <div class="propiedad__caracteristicas">
+                            <p><span>3</span> ambientes</p>
+                            <p><span>2</span> baños</p>
+                            <p><span>2</span> dormitorios</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-paginas container">
+                <ul class="paginas">
+                    <li class="pagina-item pagina-item--disabled"><a class="pag-link" href="#" tabindex="-1">Anterior</a></li>
+                    <li class="pagina-item pagina-item--active"><a class="pag-link" href="#">1</a></li>
+                    <li class="pagina-item"><a class="pag-link" href="#">2</a></li>
+                    <li class="pagina-item"><a class="pag-link" href="#">3</a></li>
+                    <li class="pagina-item"><a class="pag-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-general container">
+            <img src="../images/brand/inmobiliaria-logo2.png" alt="Logo 2 Urban" class="footer__img">
+            <section class="redes__footer">
+                <div class="redes__container">
+                    <div class="red__btn">
+                        <div class="red__btn__icon">
+                            <i class="bi-instagram"></i>
+                        </div>
+                        <span class="red__btn__text">Instagram</span>
+                    </div>
+                    <div class="red__btn">
+                        <div class="red__btn__icon">
+                            <i class="bi-facebook"></i>
+                        </div>
+                        <span class="red__btn__text">Facebook</span>
+                    </div>
+                    <div class="red__btn">
+                        <div class="red__btn__icon">
+                            <i class="bi-twitter"></i>
+                        </div>
+                        <span class="red__btn__text">Twitter</span>
+                    </div>
+                    <div class="red__btn">
+                        <div class="red__btn__icon">
+                            <i class="bi-youtube"></i>
+                        </div>
+                        <span class="red__btn__text">Youtube</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

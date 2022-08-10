@@ -1,0 +1,754 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+/* ========================= NAVBAR ========================= */
+.header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #fdfaff;
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    z-index: 1;
+}
+.nav{
+    --state-close: scale(0);
+    --state-hamburger: scale(1);
+    --sate-menu: translate(-100%);
+
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav:target{
+    --sate-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburger: scale(0);
+}
+
+.nav__logo{
+    z-index: 1;
+}
+.nav__logo__img{
+    height: 50px;
+}
+.nav__hamburger,
+.nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+
+    font-size: 1.9rem;
+    color: black;
+
+    transition: .4s transform;
+}
+
+.nav__hamburger{
+    transform: var(--state-hamburger);
+}
+.nav__close{
+    transform: var(--state-close);
+}
+.nav__links{
+    background-color: #444444c4;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--sate-menu);
+    transition: .3s transform;
+}
+
+.nav__item{
+    position: relative; /* Usado para el efecto hover del link*/
+    width: min-content; /* Para ajustar la linea cuando los links esten en pantalla completa */
+}
+
+.nav__item::before{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #D59A38;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+
+    transition: .4s ease-out;
+}
+.nav__item--acive::before{
+    background-color: #8f6420;
+    width: 40%;
+}
+.nav__item:hover::before{
+    background-color: #D59A38;
+    width: 100%;
+}
+.nav__link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    color: black;
+}
+
+@media (min-width: 768px){
+    .nav{
+        --state-hamburger: scale(0);
+        --sate-menu: translate(0);
+    }
+    .nav:target{
+        --state-close: scale(0);
+    }
+    .nav__links{
+        padding: 0;
+        background: unset;
+        position: unset;
+        transform: unset;
+        
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        
+        grid-auto-flow: column;
+        gap: 1.5em;
+    }
+    .nav__link{
+        font-size: 1rem;
+    }
+}
+/* ========================================================== */
+/* ========================== HERO ========================== */
+.hero{
+    margin-top: 74px;
+    overflow: hidden;
+    max-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__info{
+    position: absolute;
+    top: 20%;
+
+    color: white;
+}
+.hero__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+.hero__title{
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    text-align: center;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
+}
+.hero__btn{
+    padding: 8px 19px;
+    border-radius: 3px;
+    border: 1px solid black;
+
+    font-weight: 400;
+    font-size: 0.875rem;
+
+    background-color: #232323c0;
+    color: white;
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: 250ms background ease-in;
+}
+.hero__btn:hover{
+    background: #a8a8a8a6;
+    color: black;
+    transition: 250ms background ease-in;
+}
+
+@media (min-width: 768px){
+    .hero__info{
+        top: 40%;
+    }
+    .hero__title{
+        font-size: 2.8rem;
+    }
+    .hero__btn{
+        font-size: 1rem;
+        padding: 10px 28px;
+    }
+}
+
+.slider-container{
+    width: 100%;
+    margin: 0 auto;
+
+    animation: slide 24s infinite ease-in-out;
+}
+.slider-container ul{
+    display: flex;
+    width: 300%;
+}
+.slider-container li{
+    width: 100%;
+}
+.slider__img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slide{
+    0%{ margin-left: 0%; }
+    20%{ margin-left: 0%; }
+
+    25%{ margin-left: -100%; }
+    45%{ margin-left: -100%; }
+
+    50%{ margin-left: -200%; }
+    70%{ margin-left: -200%; }
+
+    75%{ margin-left: 0%; }
+    95%{ margin-left: 0%; }
+}
+/* ========================================================== */
+
+
+/* --- Seccion sobre nosotros - index --- */
+.sobre-nosotros{
+    position: relative;
+    margin: 50px auto;
+    height: 80vh;
+    background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+    background-size: cover;
+}
+.sobre-nosotros__descripcion{
+    width: 100%;
+    padding: 30px 10px;
+
+    position: absolute;
+    top: 50%;
+
+    background-color: #232323c0;
+    color: white;
+    text-align: center;
+}
+/* -------------------------------------- */
+
+/* ========================== REDES ==========================*/
+.redes{
+    width: 100%;
+    height: 130px;
+
+    margin: 10px auto;
+    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.redes__titulo{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.redes__container{
+    display: flex;
+    flex-direction: row;
+}
+.red__btn{
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    transition: all .3s ease-out;
+}
+
+.red__btn__icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+    transition: all .3s ease-out;
+}
+
+.red__btn__icon i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.red__btn__text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    color: #444444;
+    transition: all .3s ease-out;
+}
+
+@media (min-width: 768px){
+    .red__btn:hover{
+        width: 200px;
+    }
+    .red__btn:hover .red__btn__icon{
+        background: #444444;
+    }
+    .red__btn:hover .red__btn__icon i{
+        color: white;
+    }
+}
+/* ===========================================================*/
+
+
+/* ------------ Footer index ------------ */
+.donde-encontrarnos{
+    display: grid;
+    grid-template: 
+    "title" auto
+    "map" auto
+    "info" auto
+    "btn" auto
+    / auto;
+
+    margin: 15px auto;
+}
+.donde-encontrarnos__titulo{
+    grid-area: title;
+    padding: 10px 0;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    text-align: center;
+}
+.donde-encontrarnos__map{
+    grid-area: map;
+    width: 100%;
+    height: 40vh;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.donde-encontrarnos__info{
+    grid-area: info;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px auto;
+}
+.donde-encontrarnos__subtitulo{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.donde-encontrarnos__descripcion{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.donde-encontrarnos__btn{
+    grid-area: btn;
+    margin: 0 auto;
+    
+    height: min-content;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+
+    font-weight: 400;
+    font-size: 1rem;
+    color: #dddddd;
+
+    background-color: #232323;
+    cursor: pointer;
+}
+@media (min-width: 768px){
+    .donde-encontrarnos{
+        margin: 50px auto;
+        grid-template:
+        "title map" min-content
+        "info map" min-content
+        "btn map" min-content
+        / 300px auto;
+    }
+    .donde-encontrarnos__titulo{
+        grid-area: title;
+    }
+    .donde-encontrarnos__map{
+        grid-area: map;
+        height: 100%;
+        max-width: 700px;
+    }
+    .donde-encontrarnos__info{
+        grid-area: info;
+    }
+    .donde-encontrarnos__btn{
+        grid-area: btn;
+    }
+}
+/* -------------------------------------- */
+
+/* ================ PAGINA CON PROPIEDADES ================ */
+.main--propiedades{
+    background: #fafafa;
+}
+.propiedades{
+    margin-top: 80px;
+}
+.propiedades__titulo{
+    font-weight: 500;
+    font-size: 1.9rem;
+}
+
+/* --- FILTROS --- */
+.propiedades__filtro{
+    display: grid;
+    grid-template:
+    "buscar buscar buscar" min-content
+    "tipo precio precio" min-content
+    "orden orden filtrar" min-content
+    "info info info" min-content
+    / auto 60px auto;
+    gap: 5px;
+}
+.filtro__buscar{
+    grid-area: buscar;
+}
+.filtro__tipo{
+    grid-area: tipo;
+}
+.filtro__precio{
+    grid-area: precio;
+}
+.filtro__orden{
+    grid-area: orden;
+}
+.filtro__btn{
+    grid-area: filtrar;
+    width: 100%;
+    justify-self: end;
+    cursor: pointer;
+}
+.filtro__btn:hover{
+    background: #d3c3a2;
+    transition: 250ms background ease-in;
+}
+.filtro__buscar,
+.filtro__tipo,
+.filtro__precio,
+.filtro__orden,
+.filtro__btn{
+    padding: 5px;
+    background-color: #cecece;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    transition: 250ms background ease-in;
+}
+
+.filtro__buscar:focus,
+.filtro__tipo:focus,
+.filtro__precio:focus,
+.filtro__orden:focus{
+    background-color: #d3c3a2;
+    transition: 250ms background ease-in;
+}
+
+.filtro__info{
+    margin: 20px 0 5px 0;
+    grid-area: info;
+}
+.filtro__info span{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+@media (min-width: 768px){
+    .propiedades__filtro{
+        grid-template:
+        "buscar tipo precio orden filtrar" min-content
+        "info info info info info" min-content
+        / 25% min-content min-content min-content max-content;
+    }
+    .filtro__btn{
+        padding: 5px 20px;
+    }
+}
+/* --------------- */
+
+/* ----- Manejo de Propiedades ----- */
+.propiedades__wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+}
+.propiedad{
+    width: 100%;
+    box-shadow: 0 2px 3px 0 rgba(42,42,42,.05);
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #adb5be6c;
+}
+.propiedad__img{
+    width: 100%;
+}
+.propiedad__datos{
+    padding: 10px 10px 5px 10px;
+}
+.propiedad__descripcion{
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+.propiedad__valor{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.propiedad__valor .propiedad__precio{
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.propiedad__valor .propiedad__expensas{
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.propiedad__caracteristicas{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 8px;
+}
+.propiedad__caracteristicas p{
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+.propiedad__caracteristicas span{
+    font-weight: 600;
+}
+@media (min-width: 768px) {
+    .propiedades__wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1024px) {
+    .propiedades__wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/* --------------------------------- */
+
+/* Control de paginas "resultados" */
+.paginas{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.pagina-item{
+    background-color: #cecece;
+    border-radius: 3px;
+}
+.pagina-item:hover{
+    background: #d3c3a2;
+    transition: 250ms background ease-in;
+}
+.pag-link{
+    padding: 8px 10px;
+    color: black;
+}
+
+.pagina-item--active{
+    background-color: #d3bb8c;
+}
+.pagina-item--disabled:hover{
+    background-color: #cecece;
+}
+.pagina-item--disabled .pag-link{
+    color: #808080;
+    cursor: default;
+}
+@media (min-width: 768px){
+    .paginas{
+        gap: 15px;
+    }
+    .pag-link{
+        padding: 10px 15px;
+    }
+}
+
+/* ======================================================== */
+
+/* ================ FOOTER Comprar/Alquilar ================*/
+.footer{
+    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+}
+.footer-general{
+    height: 250px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.footer__img{
+    height: 100px;
+}
+@media (min-width: 768px){
+    .footer-general{
+        height: 150px;
+        padding: 20px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
+/* ======================================================== */
+
+/* ================ PAGINA CON FORMULARIOS ================ */
+.content{
+    margin-top: 74px;
+    width: 100vw;
+
+    background-image:linear-gradient(#232323c0,#232323c0), 
+    url("../images/slider/casa1.jpg");
+    background-size: cover;
+
+    display: grid;
+    grid-template:
+    "form" auto
+    "redes" min-content
+    / 100%;
+}
+.content--right{
+    background-image: linear-gradient(#232323c0,#232323c0),
+    url("../images/slider/casa5.jpg");
+}
+.form{
+    grid-area: form;
+    padding: 20px 15px 0;
+}
+.form__texto{
+    color: #fdfaff;
+    text-align: center;
+}
+.form__titulo{
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+.form__descripcion{
+    font-weight: 300;
+    font-size: .9rem;
+}
+.form__container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form__txtbox::-webkit-input-placeholder,
+.form__txt::-webkit-input-placeholder {
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+}
+.form__txtbox,
+.form__txt,
+.form__cbox,
+.form__btn{
+    background-color: #cecece21;
+    border: none;
+    outline: none;
+    color: white;
+    display: block;
+    padding: .5rem;
+    transition: 250ms background ease-in;
+}
+.form__txtbox:focus,
+.form__txt:focus{
+    background: #cececea6;
+    color: black;
+    transition: 250ms background ease-in;
+}
+.form__btn{
+    background-color: #a1a1a186;
+}
+/* --- Footer para pagina con formularios --- */
+.footer-redes{
+    grid-area: redes;
+    justify-self: center;
+    align-self: center;
+
+    margin: 15px auto;
+}
+.footer-redes .red__btn{
+    background-color: rgba(255, 255, 255, 0.384);
+}
+/* ------------------------------------------ */
+
+@media (min-width: 768px){
+    .content{
+        background-image: url("../images/slider/casa1.jpg");
+        grid-template:
+        "form none" auto
+        "form redes" auto
+        / 350px 2fr;
+        min-height: calc(100vh - 74px);
+    }
+    .content--right{
+        background-image: url("../images/slider/casa5.jpg");
+        grid-template:
+        "none form" auto
+        "redes form" auto
+        / 2fr 350px;
+    }
+    .form{
+        background: #232323c0;
+    }
+}
+/* ======================================================== */
