@@ -13,235 +13,43 @@ ul, ol{
     list-style: none;
 }
 
-.container{
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px;
-    overflow: hidden;
-}
-
 /* ========================= NAVBAR ========================= */
 .header{
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-
     background-color: #fdfaff;
     box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
-    z-index: 1;
 }
-.nav{
-    --state-close: scale(0);
-    --state-hamburger: scale(1);
-    --sate-menu: translate(-100%);
-
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav:target{
-    --sate-menu: translate(0);
-    --state-close: scale(1);
-    --state-hamburger: scale(0);
-}
-
-.nav__logo{
-    z-index: 1;
-}
-.nav__logo__img{
+.nav-logo{
     height: 50px;
 }
-.nav__hamburger,
-.nav__close{
-    cursor: pointer;
-    grid-column: -2/-1;
-    grid-row: 1/2;
-
-    font-size: 1.9rem;
-    color: black;
-
-    transition: .4s transform;
-}
-
-.nav__hamburger{
-    transform: var(--state-hamburger);
-}
-.nav__close{
-    transform: var(--state-close);
-}
-.nav__links{
-    background-color: #444444c4;
-    backdrop-filter: blur(3px);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    padding: 0;
-    display: grid;
-    align-content: center;
-    gap: 2em;
-    padding-left: 5%;
-
-    transform: var(--sate-menu);
-    transition: .3s transform;
-}
-
-.nav__item{
-    position: relative; /* Usado para el efecto hover del link*/
-    width: min-content; /* Para ajustar la linea cuando los links esten en pantalla completa */
-}
-
-.nav__item::before{
-    content: "";
-    height: 2px;
-    width: 0;
-    background-color: #D59A38;
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-
-    transition: .4s ease-out;
-}
-.nav__item--acive::before{
-    background-color: #8f6420;
-    width: 40%;
-}
-.nav__item:hover::before{
-    background-color: #D59A38;
-    width: 100%;
-}
-.nav__link{
-    text-decoration: none;
-    font-size: 1.2rem;
+.nav-link{
+    font-size: 1.1rem;
     font-weight: 500;
-
     color: black;
-}
-
-@media (min-width: 768px){
-    .nav{
-        --state-hamburger: scale(0);
-        --sate-menu: translate(0);
-    }
-    .nav:target{
-        --state-close: scale(0);
-    }
-    .nav__links{
-        padding: 0;
-        background: unset;
-        position: unset;
-        transform: unset;
-        
-        grid-column: -2/-1;
-        grid-row: 1/2;
-        
-        grid-auto-flow: column;
-        gap: 1.5em;
-    }
-    .nav__link{
-        font-size: 1rem;
-    }
 }
 /* ========================================================== */
-/* ========================== HERO ========================== */
-.hero{
-    margin-top: 74px;
-    overflow: hidden;
-    max-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ========================== HERO ========================== */
 .hero__info{
     position: absolute;
     top: 20%;
-
     color: white;
-}
-.hero__buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-}
-.hero__title{
-    font-weight: 600;
-    font-size: 1.8rem;
-
+    z-index: 1;
     text-align: center;
     text-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
 }
-.hero__btn{
-    padding: 8px 19px;
-    border-radius: 3px;
-    border: 1px solid black;
-
+.hero__buttons{
+    gap: 5px;
+}
+.hero__buttons .btn{
     font-weight: 400;
-    font-size: 0.875rem;
-
+    border: 1px solid black;
     background-color: #232323c0;
     color: white;
-
-    text-decoration: none;
-    cursor: pointer;
-    transition: 250ms background ease-in;
 }
-.hero__btn:hover{
+.hero__buttons .btn:hover{
     background: #a8a8a8a6;
     color: black;
     transition: 250ms background ease-in;
-}
-
-@media (min-width: 768px){
-    .hero__info{
-        top: 40%;
-    }
-    .hero__title{
-        font-size: 2.8rem;
-    }
-    .hero__btn{
-        font-size: 1rem;
-        padding: 10px 28px;
-    }
-}
-
-.slider-container{
-    width: 100%;
-    margin: 0 auto;
-
-    animation: slide 24s infinite ease-in-out;
-}
-.slider-container ul{
-    display: flex;
-    width: 300%;
-}
-.slider-container li{
-    width: 100%;
-}
-.slider__img{
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes slide{
-    0%{ margin-left: 0%; }
-    20%{ margin-left: 0%; }
-
-    25%{ margin-left: -100%; }
-    45%{ margin-left: -100%; }
-
-    50%{ margin-left: -200%; }
-    70%{ margin-left: -200%; }
-
-    75%{ margin-left: 0%; }
-    95%{ margin-left: 0%; }
 }
 /* ========================================================== */
 
@@ -255,11 +63,11 @@ ul, ol{
     background-size: cover;
 }
 .sobre-nosotros__descripcion{
-    width: 100%;
     padding: 30px 10px;
 
     position: absolute;
     top: 50%;
+    left: 0;
 
     background-color: #232323c0;
     color: white;
@@ -274,19 +82,11 @@ ul, ol{
 
     margin: 10px auto;
     background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .redes__titulo{
     font-weight: 400;
     font-size: 1.5rem;
     text-align: center;
-}
-.redes__container{
-    display: flex;
-    flex-direction: row;
 }
 .red__btn{
     width: 60px;
@@ -309,6 +109,7 @@ ul, ol{
     line-height: 60px;
     text-align: center;
     transition: all .3s ease-out;
+    color: black;
 }
 
 .red__btn__icon i{
@@ -340,40 +141,15 @@ ul, ol{
 
 
 /* ------------ Footer index ------------ */
-.donde-encontrarnos{
-    display: grid;
-    grid-template: 
-    "title" auto
-    "map" auto
-    "info" auto
-    "btn" auto
-    / auto;
-
-    margin: 15px auto;
-}
 .donde-encontrarnos__titulo{
-    grid-area: title;
     padding: 10px 0;
-
+    
     font-weight: 500;
     font-size: 1.5rem;
-
     text-align: center;
-}
-.donde-encontrarnos__map{
-    grid-area: map;
-    width: 100%;
-    height: 40vh;
-    border-radius: 5px;
-    margin: 0 auto;
 }
 .donde-encontrarnos__info{
-    grid-area: info;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 5px auto;
 }
 .donde-encontrarnos__subtitulo{
@@ -384,53 +160,10 @@ ul, ol{
     font-weight: 400;
     font-size: 1rem;
 }
-.donde-encontrarnos__btn{
-    grid-area: btn;
-    margin: 0 auto;
-    
-    height: min-content;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-
-    font-weight: 400;
-    font-size: 1rem;
-    color: #dddddd;
-
-    background-color: #232323;
-    cursor: pointer;
-}
-.donde-encontrarnos__btn:hover{
-    background-color: #444444;
-}
-@media (min-width: 768px){
-    .donde-encontrarnos{
-        margin: 50px auto;
-        grid-template:
-        "title map" min-content
-        "info map" min-content
-        "btn map" min-content
-        / 300px auto;
-    }
-    .donde-encontrarnos__titulo{
-        grid-area: title;
-    }
-    .donde-encontrarnos__map{
-        grid-area: map;
-        height: 100%;
-        max-width: 700px;
-    }
-    .donde-encontrarnos__info{
-        grid-area: info;
-    }
-    .donde-encontrarnos__btn{
-        grid-area: btn;
-    }
-}
 /* -------------------------------------- */
 
 /* ================ PAGINA CON PROPIEDADES ================ */
-.main--propiedades{
+/* .main--propiedades{
     background: #fafafa;
 }
 .propiedades{
@@ -439,10 +172,10 @@ ul, ol{
 .propiedades__titulo{
     font-weight: 500;
     font-size: 1.9rem;
-}
+} */
 
 /* --- FILTROS --- */
-.propiedades__filtro{
+/* .propiedades__filtro{
     display: grid;
     grid-template:
     "buscar buscar buscar" min-content
@@ -500,7 +233,6 @@ ul, ol{
 .filtro__precio:hover,
 .filtro__orden:hover{
     border: 1px solid black;
-    /* transition: 250ms background ease-in; */
 }
 
 
@@ -523,11 +255,11 @@ ul, ol{
     .filtro__btn{
         padding: 5px 20px;
     }
-}
+} */
 /* --------------- */
 
 /* ----- Manejo de Propiedades ----- */
-.propiedades__wrapper{
+/* .propiedades__wrapper{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
@@ -587,11 +319,11 @@ ul, ol{
     .propiedades__wrapper{
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+} */
 /* --------------------------------- */
 
 /* Control de paginas "resultados" */
-.paginas{
+/* .paginas{
     width: 100%;
     margin: 20px auto;
     display: flex;
@@ -630,12 +362,12 @@ ul, ol{
     .pag-link{
         padding: 10px 15px;
     }
-}
+} */
 
 /* ======================================================== */
 
 /* ================ FOOTER Comprar/Alquilar ================*/
-.footer{
+/* .footer{
     background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
 }
 .footer-general{
@@ -658,11 +390,11 @@ ul, ol{
         justify-content: space-between;
         
     }
-}
+} */
 /* ======================================================== */
 
 /* ================ PAGINA CON FORMULARIOS ================ */
-.content{
+/* .content{
     margin-top: 74px;
     width: 100vw;
 
@@ -742,9 +474,9 @@ ul, ol{
 }
 .form__btn:hover{
     background-color: #cececea6;
-}
+} */
 /* --- Footer para pagina con formularios --- */
-.footer-redes{
+/* .footer-redes{
     grid-area: redes;
     justify-self: center;
     align-self: center;
@@ -753,10 +485,10 @@ ul, ol{
 }
 .footer-redes .red__btn{
     background-color: rgba(255, 255, 255, 0.384);
-}
+} */
 /* ------------------------------------------ */
 
-@media (min-width: 768px){
+/* @media (min-width: 768px){
     .content{
         background-image: url("../images/slider/casa1.jpg");
         grid-template:
@@ -775,5 +507,5 @@ ul, ol{
     .form{
         background: #232323c0;
     }
-}
+} */
 /* ======================================================== */

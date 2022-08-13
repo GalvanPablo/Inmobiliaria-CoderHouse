@@ -10,95 +10,129 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./src/style/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container" id="nav">
-            <a href=#" class="nav__logo"><img src="./src/images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav__logo__img"></a>
-            <ul class="nav__links">
-                <li class="nav__item nav__item--acive"><a href="./index.html" class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a href="./src/pages/comprar.html" class="nav__link">Comprar</a></li>
-                <li class="nav__item"><a href="./src/pages/alquilar.html" class="nav__link">Alquilar</a></li>
-                <li class="nav__item"><a href="./src/pages/vender.html" class="nav__link">Vender</a></li>
-                <li class="nav__item"><a href="./src/pages/contacto.html" class="nav__link">Contacto</a></li>
-            </ul>
-            <a href="#nav" class="nav__hamburger"><i class="bi-list"></i></a>
-            <a href="#" class="nav__close"><i class="bi-x-lg"></i></a>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-xl">
+                <a href="#" class="navbar-brand"><img src="./src/images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./src/pages/comprar.html" class="nav-link">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./src/pages/alquilar.html" class="nav-link">Alquilar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./src/pages/vender.html" class="nav-link">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./src/pages/contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero__info">
-            <h1 class="hero__title">Mucho más que un lugar</h1>
-            <div class="hero__buttons">
-                <a href="./src/pages/comprar.html" class="hero__btn">Comprar</a>
-                <a href="./src/pages/alquilar.html" class="hero__btn">Alquilar</a>
-                <a href="./src/pages/vender.html" class="hero__btn">Vender</a>
+
+    <div id="carouselHero" class="carousel slide carousel-fade d-flex justify-content-center" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./src/images/slider/casa1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./src/images/slider/casa2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./src/images/slider/casa3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
-        <div class="slider-container">
-            <ul>
-                <li><img src="./src/images/slider/casa1.jpg" alt="propiedad 1" class="slider__img"></li>
-                <li><img src="./src/images/slider/casa2.jpg" alt="propiedad 2" class="slider__img"></li>
-                <li><img src="./src/images/slider/casa3.jpg" alt="propiedad 3" class="slider__img"></li>
-            </ul>
+        <div class="hero__info">
+            <h1 class="hero__title">Mucho más que un lugar</h1>
+            <div class="hero__buttons d-flex justify-content-center">
+                <a href="./src/pages/comprar.html" class="btn">Comprar</a>
+                <a href="./src/pages/alquilar.html" class="btn">Alquilar</a>
+                <a href="./src/pages/vender.html" class="btn">Vender</a>
+            </div>
         </div>
-    </section>
+    </div>
+
+
     <main class="main">
-        <section class="sobre-nosotros container">
-            <div class="sobre-nosotros__descripcion">
+        <section class="sobre-nosotros container-sm">
+            <div class="sobre-nosotros__descripcion container-fluid">
                 <h2 class="sobre-nosotros__titulo">Quienes Somos</h2>
                 <p class="sobre-nosotros__parrafo">Estudio Inmobiliario es una empresa joven y familiar en crecimiento. En la búsqueda de una prestación de servicios profesionales, brindando transparencia y eficacia en las operaciones inmobiliarias.</p>
             </div>
         </section>
-        <section class="redes">
+
+        <section class="redes container-fluid d-flex flex-column justify-content-center align-items-center">
             <h2 class="redes__titulo">Nuestras redes</h2>
-            <div class="redes__container">
+            <div class="redes__container d-flex">
                 <div class="red__btn">
-                    <div class="red__btn__icon">
+                    <a href="#" class="red__btn__icon">
                         <i class="bi-instagram"></i>
-                    </div>
+                    </a>
                     <span class="red__btn__text">Instagram</span>
                 </div>
                 <div class="red__btn">
-                    <div class="red__btn__icon">
+                    <a href="#" class="red__btn__icon">
                         <i class="bi-facebook"></i>
-                    </div>
+                    </a>
                     <span class="red__btn__text">Facebook</span>
                 </div>
                 <div class="red__btn">
-                    <div class="red__btn__icon">
+                    <a href="#" class="red__btn__icon">
                         <i class="bi-twitter"></i>
-                    </div>
+                    </a>
                     <span class="red__btn__text">Twitter</span>
                 </div>
                 <div class="red__btn">
-                    <div class="red__btn__icon">
+                    <a href="#" class="red__btn__icon">
                         <i class="bi-youtube"></i>
-                    </div>
+                    </a>
                     <span class="red__btn__text">Youtube</span>
                 </div>
             </div>
         </section>
     </main>
     <footer class="donde-encontrarnos container">
-        <h2 class="donde-encontrarnos__titulo">Donde encontrarnos</h2>
-        <div class="donde-encontrarnos__info">
-            <div class="donde-encontrarnos__caracteristica">
-                <h3 class="donde-encontrarnos__subtitulo">Ubicación</h3>
-                <p class="donde-encontrarnos__descripcion">Calle Nº3 Capital Federal</p>
+        <div class="row">
+            <div class="donde-encontrarnos__info col col-md col-lg-5">
+                <h2 class="donde-encontrarnos__titulo">Donde encontrarnos</h2>
+                <div class="donde-encontrarnos__caracteristica">
+                    <h3 class="donde-encontrarnos__subtitulo">Ubicación</h3>
+                    <p class="donde-encontrarnos__descripcion">Calle Nº3 Capital Federal</p>
+                </div>
+                <div class="donde-encontrarnos__caracteristica">
+                    <h3 class="donde-encontrarnos__subtitulo">Teléfono</h3>
+                    <p class="donde-encontrarnos__descripcion">+54 9 11 1234-5678</p>
+                </div>
+                <div class="donde-encontrarnos__caracteristica">
+                    <h3 class="donde-encontrarnos__subtitulo">E-Mail</h3>
+                    <p class="donde-encontrarnos__descripcion">correo@gmail.com</p>
+                </div>
+                <a href="./src/pages/contacto.html" class="donde-encontrarnos__btn btn btn-dark">Contactanos!</a>
             </div>
-            <div class="donde-encontrarnos__caracteristica">
-                <h3 class="donde-encontrarnos__subtitulo">Teléfono</h3>
-                <p class="donde-encontrarnos__descripcion">+54 9 11 1234-5678</p>
-            </div>
-            <div class="donde-encontrarnos__caracteristica">
-                <h3 class="donde-encontrarnos__subtitulo">E-Mail</h3>
-                <p class="donde-encontrarnos__descripcion">correo@gmail.com</p>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.715699714825!2d-58.4344612848864!3d-34.58605956407065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc945173b3dd7%3A0xe8a347bb55df550c!2sCoderhouse%20Argentina!5e0!3m2!1ses-419!2sar!4v1658783191868!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="donde-encontrarnos__map col col-md col-lg-7"></iframe>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.715699714825!2d-58.4344612848864!3d-34.58605956407065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc945173b3dd7%3A0xe8a347bb55df550c!2sCoderhouse%20Argentina!5e0!3m2!1ses-419!2sar!4v1658783191868!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="donde-encontrarnos__map"></iframe>
-        <a href="./src/pages/contacto.html" class="donde-encontrarnos__btn">Contactanos!</a>
     </footer>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
