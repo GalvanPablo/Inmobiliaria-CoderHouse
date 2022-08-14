@@ -10,39 +10,67 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
-    <header class="header">
-        <nav class="nav container" id="nav">
-            <a href="../../index.html" class="nav__logo"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav__logo__img"></a>
-            <ul class="nav__links">
-                <li class="nav__item"><a href="../../index.html" class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a href="./comprar.html" class="nav__link">Comprar</a></li>
-                <li class="nav__item"><a href="./alquilar.html" class="nav__link">Alquilar</a></li>
-                <li class="nav__item"><a href="./vender.html" class="nav__link">Vender</a></li>
-                <li class="nav__item nav__item--acive"><a href="./contacto.html" class="nav__link">Contacto</a></li>
-            </ul>
-            <a href="#nav" class="nav__hamburger"><i class="bi-list"></i></a>
-            <a href="#" class="nav__close"><i class="bi-x-lg"></i></a>
+<body class="content">
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-xl">
+                <a href="../../index.html" class="navbar-brand"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./comprar.html" class="nav-link">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./alquilar.html" class="nav-link">Alquilar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./vender.html" class="nav-link">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="nav-link active">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="content content--right">
+
+    <div class="contenedor d-flex flex-column justify-content-center align-items-center">
         <main class="form">
             <div class="form__texto">
                 <h1 class="form__titulo">Envíenos un mensaje</h1>
                 <p class="form__descripcion">Completá el formulario para contactarnos sobre cualquier pregunta o comentario que tengas y nos contactaremos a la brevedad.</p>
             </div>
-            <form action="#" class="form__container">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido *" class="form__txtbox">
-                <input type="email" name="email" id="email" placeholder="E-Mail *" class="form__txtbox">
-                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono *" class="form__txtbox">
-                <textarea name="mensaje" id="mensaje" cols="30" rows="14" placeholder="Mensaje" class="form__txt"></textarea>
-                <input type="submit" value="Enviar" class="form__btn">
+            <form action="#" class="form__container d-flex flex-column justify-content-center">
+                <div class="input-group input-group-sm mb-3 input-form">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Nombre de usuario">
+                </div>
+                <div class="input-group input-group-sm mb-3 input-form">
+                    <input type="mail" class="form-control" placeholder="Email" aria-label="Nombre de usuario del destinatario">
+                    <span class="input-group-text" id="basic-addon2">@mail</span>
+                </div>
+                <div class="input-group input-group-sm mb-3 input-form">
+                    <input type="tel" class="form-control" placeholder="+54 9 11 1234-5678" aria-label="telefono">
+                    <span class="input-group-text" id="basic-addon1">Tel</span>
+                </div>
+                <div class="input-group input-group-sm input-form">
+                    <textarea class="form-control" aria-label="With textarea" rows="9" placeholder="Comentarios"></textarea>
+                </div>
+                <button class="btn btn-outline-secondary form__btn" type="button" id="button-addon1">Enviar</button>
             </form>
         </main>
         <footer class="footer-redes">
-            <div class="redes__container">
+            <div class="redes__container d-flex flex-row">
                 <div class="red__btn">
                     <div class="red__btn__icon">
                         <i class="bi-instagram"></i>
@@ -70,5 +98,8 @@
             </div>
         </footer>
     </div>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

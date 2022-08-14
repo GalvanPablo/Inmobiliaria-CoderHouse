@@ -21,10 +21,25 @@ ul, ol{
 .nav-logo{
     height: 50px;
 }
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
 .nav-link{
     font-size: 1.1rem;
     font-weight: 500;
     color: black;
+    transition: 240ms ease-in;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: #D59A38;
+}
+.nav-link:hover{
+    color: #d3c3a2;
+    transition: 240ms ease-in;
 }
 /* ========================================================== */
 
@@ -325,11 +340,6 @@ ul, ol{
 .footer-general{
     height: 250px;
     padding: 15px 0;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; */
 }
 .footer__img{
     height: 100px;
@@ -346,27 +356,17 @@ ul, ol{
 /* ======================================================== */
 
 /* ================ PAGINA CON FORMULARIOS ================ */
-/* .content{
-    margin-top: 74px;
-    width: 100vw;
-
-    background-image:linear-gradient(#232323c0,#232323c0), 
-    url("../images/slider/casa1.jpg");
-    background-size: cover;
-
-    display: grid;
-    grid-template:
-    "form" auto
-    "redes" min-content
-    / 100%;
+.content{
+    background-image: url("../images/slider/casa1.jpg");
 }
-.content--right{
-    background-image: linear-gradient(#232323c0,#232323c0),
-    url("../images/slider/casa5.jpg");
-}
-.form{
-    grid-area: form;
-    padding: 20px 15px 0;
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    min-height: calc(100vh - 76px);
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background:linear-gradient(#232323c0,#232323c0);
 }
 .form__texto{
     color: #fdfaff;
@@ -376,59 +376,52 @@ ul, ol{
     font-weight: 500;
     font-size: 1.7rem;
 }
-.form__descripcion{
-    font-weight: 300;
-    font-size: .9rem;
-}
 .form__container{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
+    width: 100%;
+}
+.form__btn{
+    margin: 10px auto;
+    width: 30%;
 }
 
-.form__txtbox::-webkit-input-placeholder,
-.form__txt::-webkit-input-placeholder {
-    font-weight: 300;
-    color: rgba(255,255,255,0.7);
+.input-form span,
+.input-form label{
+    background-color: #c0c0c0;
+    border: 1px solid black;
 }
-.form__txtbox,
-.form__txt,
-.form__cbox,
-.form__btn{
-    background-color: #cecece21;
-    border: none;
-    outline: none;
-    color: white;
-    display: block;
-    padding: .5rem;
-    transition: 250ms background ease-in;
+.input-form input,
+.input-form select,
+.input-form textarea{
+    background-color: #f4f4f4de;
+    border: 1px solid black;
+    transition: 240ms ease-in-out;
 }
-.form__txtbox:hover,
-.form__txt:hover,
-.form__cbox:hover{
-    background-color: #cecece4d;
-}
-.form__cbox__option{
-    background-color: #cecece21;
-    color: black;
-}
-.form__txtbox:focus,
-.form__txt:focus{
-    background: #cececea6;
-    color: black;
-    transition: 250ms background ease-in;
+.input-form input:focus,
+.input-form select:focus,
+.input-form textarea:focus{
+    box-shadow: none;
+    border: 1px solid #D59A38;
+    transition: 240ms ease-in-out;
 }
 .form__btn{
-    background-color: #a1a1a186;
-    cursor: pointer;
+    background-color: #d3c3a2;
+    font-weight: 500;
+    transition: 240ms ease-in-out;
 }
 .form__btn:hover{
-    background-color: #cececea6;
-} */
+    background-color: #c0c0c0;
+    border: 1px solid #D59A38;
+    color: white;
+    transition: 240ms ease-in-out;
+}
+@media (min-width: 768px) {
+    .contenedor{
+        padding: 30px 150px 10px 150px;
+    }
+}
+
 /* --- Footer para pagina con formularios --- */
-/* .footer-redes{
+.footer-redes{
     grid-area: redes;
     justify-self: center;
     align-self: center;
@@ -437,27 +430,5 @@ ul, ol{
 }
 .footer-redes .red__btn{
     background-color: rgba(255, 255, 255, 0.384);
-} */
-/* ------------------------------------------ */
-
-/* @media (min-width: 768px){
-    .content{
-        background-image: url("../images/slider/casa1.jpg");
-        grid-template:
-        "form none" auto
-        "form redes" auto
-        / 350px 2fr;
-        min-height: calc(100vh - 74px);
-    }
-    .content--right{
-        background-image: url("../images/slider/casa5.jpg");
-        grid-template:
-        "none form" auto
-        "redes form" auto
-        / 2fr 350px;
-    }
-    .form{
-        background: #232323c0;
-    }
-} */
+}
 /* ======================================================== */
