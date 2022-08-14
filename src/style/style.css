@@ -141,6 +141,9 @@ ul, ol{
 
 
 /* ------------ Footer index ------------ */
+.donde-encontrarnos{
+    padding: 15px 0;
+}
 .donde-encontrarnos__titulo{
     padding: 10px 0;
     
@@ -163,114 +166,96 @@ ul, ol{
 /* -------------------------------------- */
 
 /* ================ PAGINA CON PROPIEDADES ================ */
-/* .main--propiedades{
-    background: #fafafa;
-}
 .propiedades{
-    margin-top: 80px;
+    margin-top: 10px;
 }
 .propiedades__titulo{
     font-weight: 500;
     font-size: 1.9rem;
-} */
+}
 
 /* --- FILTROS --- */
-/* .propiedades__filtro{
-    display: grid;
-    grid-template:
-    "buscar buscar buscar" min-content
-    "tipo precio precio" min-content
-    "orden orden filtrar" min-content
-    "info info info" min-content
-    / auto 60px auto;
+.propiedades__filtro{
     gap: 5px;
 }
-.filtro__buscar{
-    grid-area: buscar;
-}
-.filtro__tipo{
-    grid-area: tipo;
-}
 .filtro__precio{
-    grid-area: precio;
+    gap: 5px;
 }
-.filtro__orden{
-    grid-area: orden;
+.filtro__precio__divisa{
+    width: min-content;
 }
-.filtro__btn{
-    grid-area: filtrar;
-    width: 100%;
-    justify-self: end;
-    cursor: pointer;
-}
-.filtro__btn:hover{
-    background: #d3c3a2;
-    border: 1px solid black;
-    transition: 250ms ease-in;
-}
-.filtro__buscar,
-.filtro__tipo,
-.filtro__precio,
-.filtro__orden,
-.filtro__btn{
-    padding: 5px;
-    background-color: #cecece;
-    border-radius: 2px;
-    border: 1px solid #00000000;
-    outline: none;
-    transition: 250ms ease-in;
-}
-
-.filtro__buscar:focus,
-.filtro__tipo:focus,
-.filtro__precio:focus,
-.filtro__orden:focus{
-    background-color: #d3c3a2;
-    transition: 250ms ease-in;
-}
-.filtro__buscar:hover,
-.filtro__tipo:hover,
-.filtro__precio:hover,
-.filtro__orden:hover{
-    border: 1px solid black;
-}
-
-
-.filtro__info{
+.resultados__info{
     margin: 20px 0 5px 0;
-    grid-area: info;
 }
-.filtro__info span{
+.resultados__info span{
     font-weight: 600;
     font-size: 1.1em;
 }
+.filtro__btn{
+    background-color: #cecece;
+    color: black;
+    border: 1px solid #cecece;
+}
+.filtro__btn:hover{
+    background-color: #d3c3a2;
+    border: 1px solid #d3c3a2;
+}
+.filtro__buscar,
+.filtro__tipo,
+.filtro__precio__divisa,
+.filtro__precio__valor,
+.filtro__orden{
+    background-color: #cecece;
+    transition: 240ms ease-in;
+}
+.filtro__buscar:focus,
+.filtro__tipo:focus,
+.filtro__precio__divisa:focus,
+.filtro__precio__valor:focus,
+.filtro__orden:focus{
+    background-color: #d3c3a2;
+    box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
+    border: 1px solid #d3c3a2;
+    transition: 240ms ease-out;
+}
+.filtro__buscar:hover,
+.filtro__tipo:hover,
+.filtro__precio__divisa:hover,
+.filtro__precio__valor:hover,
+.filtro__orden:hover,
+.filtro__btn:hover{
+    border: 1px solid black;
+}
 
-@media (min-width: 768px){
+@media (min-width: 992px){
     .propiedades__filtro{
-        grid-template:
-        "buscar tipo precio orden filtrar" min-content
-        "info info info info info" min-content
-        / 25% min-content min-content min-content max-content;
+        height: 40px;
+    }
+    .filtro__tipo,
+    .filtro__orden{
+        width: min-content;
+    }
+    .filtro__precio__valor{
+        width: 100px;
     }
     .filtro__btn{
-        padding: 5px 20px;
+        width: 40%;
     }
-} */
+}
+@media (min-width: 1200px){
+    .filtro__btn{
+        width: 20%;
+    }
+}
 /* --------------- */
 
 /* ----- Manejo de Propiedades ----- */
-/* .propiedades__wrapper{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 25px;
-}
 .propiedad{
-    width: 100%;
     box-shadow: 0 2px 3px 0 rgba(42,42,42,.05);
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #adb5be6c;
+    padding: 0;
 }
 .propiedad__img{
     width: 100%;
@@ -281,6 +266,11 @@ ul, ol{
 .propiedad__descripcion{
     font-weight: 300;
     font-size: 0.875rem;
+    width: 100%;
+    display: block;
+}
+.propiedad__descripcion{
+    margin: 10px auto;
 }
 .propiedad__valor{
     display: flex;
@@ -295,12 +285,7 @@ ul, ol{
     font-weight: 400;
     font-size: 1rem;
 }
-
 .propiedad__caracteristicas{
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
     gap: 8px;
 }
 .propiedad__caracteristicas p{
@@ -310,87 +295,54 @@ ul, ol{
 .propiedad__caracteristicas span{
     font-weight: 600;
 }
-@media (min-width: 768px) {
-    .propiedades__wrapper{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media (min-width: 1024px) {
-    .propiedades__wrapper{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-} */
 /* --------------------------------- */
-
 /* Control de paginas "resultados" */
-/* .paginas{
-    width: 100%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
+.paginas{
+    margin-top: 10px;
 }
-.pagina-item{
+.page-link{
     background-color: #cecece;
-    border-radius: 3px;
-}
-.pagina-item:hover{
-    background: #d3c3a2;
-    transition: 250ms background ease-in;
-}
-.pag-link{
-    padding: 8px 10px;
     color: black;
+    font-weight: 500;
 }
-
-.pagina-item--active{
-    background-color: #d3bb8c;
+.page-link:hover{
+    color: #D59A38;
 }
-.pagina-item--disabled:hover{
-    background-color: #cecece;
+.page-link:focus{
+    color: #D59A38;
 }
-.pagina-item--disabled .pag-link{
-    color: #808080;
-    cursor: default;
+.active>.page-link, .page-link.active{
+    background-color: #d3c3a2;
+    border: 1px solid #d3c3a2;
 }
-@media (min-width: 768px){
-    .paginas{
-        gap: 15px;
-    }
-    .pag-link{
-        padding: 10px 15px;
-    }
-} */
 
 /* ======================================================== */
 
 /* ================ FOOTER Comprar/Alquilar ================*/
-/* .footer{
+.footer{
     background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
 }
 .footer-general{
     height: 250px;
     padding: 15px 0;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 15px; */
 }
 .footer__img{
     height: 100px;
+    margin-bottom: 20px;
 }
 @media (min-width: 768px){
     .footer-general{
         height: 150px;
-        padding: 20px 0;
-        flex-direction: row;
-        justify-content: space-between;
-        
     }
-} */
+    .footer__img{
+        margin-bottom: unset;
+    }   
+}
 /* ======================================================== */
 
 /* ================ PAGINA CON FORMULARIOS ================ */

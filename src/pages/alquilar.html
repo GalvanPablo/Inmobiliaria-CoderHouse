@@ -10,30 +10,47 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container" id="nav">
-            <a href="../../index.html" class="nav__logo"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav__logo__img"></a>
-            <ul class="nav__links">
-                <li class="nav__item"><a href="../../index.html" class="nav__link">Inicio</a></li>
-                <li class="nav__item"><a href="./comprar.html" class="nav__link">Comprar</a></li>
-                <li class="nav__item nav__item--acive"><a href="./alquilar.html" class="nav__link">Alquilar</a></li>
-                <li class="nav__item"><a href="./vender.html" class="nav__link">Vender</a></li>
-                <li class="nav__item"><a href="./contacto.html" class="nav__link">Contacto</a></li>
-            </ul>
-            <a href="#nav" class="nav__hamburger"><i class="bi-list"></i></a>
-            <a href="#" class="nav__close"><i class="bi-x-lg"></i></a>
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-xl">
+                <a href="../../index.html" class="navbar-brand"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urban Inmbobiliaria" class="nav-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./comprar.html" class="nav-link active">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./alquilar.html" class="nav-link">Alquilar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./vender.html" class="nav-link">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="main main--propiedades">
         <div class="propiedades container">
-            <h1 class="propiedades__titulo">Propiedades en alquiler</h1>
+            <h1 class="propiedades__titulo">Propiedades en venta</h1>
 
-            <div class="propiedades__filtro">
-                <input type="search" name="buscar" id="buscar" placeholder="Buscar" class="filtro__buscar">
-                <select name="tipo-propiedad" id="tipo-propiedad" class="filtro__tipo">
+            <div class="d-flex flex-column flex-lg-row propiedades__filtro">
+                <input type="search" name="buscar" id="buscar" placeholder="Buscar" class="form-control filtro__buscar">
+                <select name="tipo-propiedad" id="tipo-propiedad" class="form-select filtro__tipo">
+                    <option selected disabled value="">Tipo propiedad</option>
                     <option value="tipo-casa">Casa</option>
                     <option value="tipo-departamento">Departamento</option>
                     <option value="tipo-Cochera">Cochera</option>
@@ -45,70 +62,71 @@
                     <option value="tipo-deposito">Deposito</option>
                     <option value="tipo-edificio">Edificio</option>
                 </select>
-                <select name="precio" id="precio" class="filtro__precio">
-                    <option value="precio-1">Hasta 50.000 USD</option>
-                    <option value="precio-2">Hasta 100.000 USD</option>
-                    <option value="precio-3">Hasta 150.000 USD</option>
-                    <option value="precio-4">Hasta 200.000 USD</option>
-                    <option value="precio-5">Mas de 200.000 USD</option>
-                </select>
-                <select name="tipo-orden" id="tipo-orden" class="filtro__orden">
+                <div class="d-flex flex-row filtro__precio">
+                    <select name="tipo-divisa" id="tipo-divisa" class="form-select filtro__precio__divisa">
+                        <option value="tipo-USD">USD</option>
+                        <option value="tipo-ARS">ARS</option>
+                    </select>
+                    <input type="text" name="" id="" class="form-control filtro__precio__valor" placeholder="Desde">
+                    <input type="text" name="" id="" class="form-control filtro__precio__valor" placeholder="Hasta">
+                </div>
+                <select name="tipo-orden" id="tipo-orden" class="form-select filtro__orden">
                     <option value="tipo-menor">Menor precio</option>
                     <option value="tipo-mayor">Mayor precio</option>
                 </select>
-                <button class="filtro__btn"><i class="bi-funnel-fill"></i>Filtrar</button>
-
-                <p class="filtro__info"><span>3</span> resultados encontrados</p>
+                <button class="btn btn-primary filtro__btn"><i class="bi-funnel-fill"></i>Filtrar</button>
             </div>
+            <p class="resultados__info"><span>5</span> resultados encontrados</p>
 
-            <div class="propiedades__wrapper">
-                <div class="propiedad">
+            <div class="propiedades container-lg row g-2">
+                <div class="propiedad col col-md-6 col-lg-4">
                     <img src="../images/propiedades/en_alquiler/propiedad1.webp" alt="Propiedad 1" class="propiedad__img">
                     <div class="propiedad__datos">
-                        <p class="propiedad__descripcion"> Departamento monoambiente en alquiler en Aristóbulo Del Valle 400, Lanus Oeste, Lanus, Lanus, Buenos Aires </p>
+                        <p class="propiedad__descripcion text-truncate">Departamento monoambiente en alquiler en Aristóbulo Del Valle 400, Lanus Oeste, Lanus, Lanus, Buenos Aires</p>
                         <div class="propiedad__valor">
                             <p class="propiedad__precio">37.000 ARS</p>
                             <p class="propiedad__expensas">+ 4.000 ARS expensas</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>36</span> m² totales</p>
                             <p><span>32</span> m² cubiertos</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>1</span> ambiente</p>
                             <p><span>1</span> baño</p>
                         </div>
                     </div>
                 </div>
-                <div class="propiedad">
+                <div class="propiedad col col-md-6 col-lg-4">
                     <img src="../images/propiedades/en_alquiler/propiedad2.webp" alt="Propiedad 2" class="propiedad__img">
                     <div class="propiedad__datos">
-                        <p class="propiedad__descripcion"> Local en alquiler en Av. Eva Peron 2300, Parque Chacabuco, Capital Federal </p>
+                        <p class="propiedad__descripcion text-truncate">Local en alquiler en Av. Eva Peron 2300, Parque Chacabuco, Capital Federal</p>
                         <div class="propiedad__valor">
-                            <p class="propiedad__precio">95.000 USD</p>
+                            <p class="propiedad__precio">95.000 ARS</p>
+                            <p class="propiedad__expensas">+ 6.500 ARS expensas</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>108.92</span> m² totales</p>
                             <p><span>108.92</span> m² cubiertos</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>1</span> baño</p>
                         </div>
                     </div>
                 </div>
-                <div class="propiedad">
+                <div class="propiedad col col-md-6 col-lg-4">
                     <img src="../images/propiedades/en_alquiler/propiedad3.webp" alt="Propiedad 3" class="propiedad__img">
                     <div class="propiedad__datos">
-                        <p class="propiedad__descripcion"> Departamento en alquiler en Avenida San Isidro Labrador 4400, Saavedra, Capital Federal </p>
+                        <p class="propiedad__descripcion text-truncate">Departamento en alquiler en Avenida San Isidro Labrador 4400, Saavedra, Capital Federal</p>
                         <div class="propiedad__valor">
                             <p class="propiedad__precio">165.000 ARS</p>
                             <p class="propiedad__expensas">+ 13.000 ARS expensas</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>108.39</span> m² totales</p>
                             <p><span>75</span> m² cubiertos</p>
                         </div>
-                        <div class="propiedad__caracteristicas">
+                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
                             <p><span>3</span> ambientes</p>
                             <p><span>2</span> baños</p>
                             <p><span>2</span> dormitorios</p>
@@ -117,22 +135,23 @@
                 </div>
             </div>
 
-            <nav class="nav-paginas container">
-                <ul class="paginas">
-                    <li class="pagina-item pagina-item--disabled"><a class="pag-link" href="#" tabindex="-1">Anterior</a></li>
-                    <li class="pagina-item pagina-item--active"><a class="pag-link" href="#">1</a></li>
-                    <li class="pagina-item"><a class="pag-link" href="#">2</a></li>
-                    <li class="pagina-item"><a class="pag-link" href="#">3</a></li>
-                    <li class="pagina-item"><a class="pag-link" href="#">Siguiente</a></li>
+            <nav aria-label="Resultados encontrados" class="paginas">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link">Anterior</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" aria-current="page"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
                 </ul>
             </nav>
         </div>
     </main>
+
     <footer class="footer">
-        <div class="footer-general container">
+        <div class="footer-general container d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-between">
             <img src="../images/brand/inmobiliaria-logo2.png" alt="Logo 2 Urban" class="footer__img">
             <section class="redes__footer">
-                <div class="redes__container">
+                <div class="redes__container d-flex">
                     <div class="red__btn">
                         <div class="red__btn__icon">
                             <i class="bi-instagram"></i>
@@ -161,5 +180,8 @@
             </section>
         </div>
     </footer>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
