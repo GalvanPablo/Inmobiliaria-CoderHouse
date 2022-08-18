@@ -92,7 +92,6 @@ ul, ol{
 
 /* ========================== REDES ==========================*/
 .redes{
-    width: 100%;
     height: 130px;
 
     margin: 10px auto;
@@ -159,16 +158,14 @@ ul, ol{
 .donde-encontrarnos{
     padding: 15px 0;
 }
-.donde-encontrarnos__titulo{
-    padding: 10px 0;
-    
-    font-weight: 500;
-    font-size: 1.5rem;
-    text-align: center;
-}
 .donde-encontrarnos__info{
     text-align: center;
     margin: 5px auto;
+}
+.donde-encontrarnos__titulo{
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 .donde-encontrarnos__subtitulo{
     font-weight: 500;
@@ -190,9 +187,7 @@ ul, ol{
 }
 
 /* --- FILTROS --- */
-.propiedades__filtro{
-    gap: 5px;
-}
+.propiedades__filtro,
 .filtro__precio{
     gap: 5px;
 }
@@ -271,6 +266,8 @@ ul, ol{
     border-radius: 4px;
     border: 1px solid #adb5be6c;
     padding: 0;
+
+    margin: 5px;
 }
 .propiedad__img{
     width: 100%;
@@ -281,10 +278,6 @@ ul, ol{
 .propiedad__descripcion{
     font-weight: 300;
     font-size: 0.875rem;
-    width: 100%;
-    display: block;
-}
-.propiedad__descripcion{
     margin: 10px auto;
 }
 .propiedad__valor{
@@ -294,18 +287,18 @@ ul, ol{
 }
 .propiedad__valor .propiedad__precio{
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 .propiedad__valor .propiedad__expensas{
     font-weight: 400;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 .propiedad__caracteristicas{
     gap: 8px;
+    font-size: 0.875rem;
 }
 .propiedad__caracteristicas p{
     font-weight: 400;
-    font-size: 0.875rem;
 }
 .propiedad__caracteristicas span{
     font-weight: 600;
@@ -357,11 +350,16 @@ ul, ol{
 
 /* ================ PAGINA CON FORMULARIOS ================ */
 .content{
+    background-size: cover;
+}
+.content-1{
     background-image: url("../images/slider/casa1.jpg");
 }
+.content-2{
+    background-image: url("../images/slider/casa2.jpg");
+}
 .contenedor{
-    width: 100%;
-    max-width: 1000px;
+    max-width: 1024px;
     min-height: calc(100vh - 76px);
     height: 100%;
     margin: 0 auto;
@@ -375,9 +373,6 @@ ul, ol{
 .form__titulo{
     font-weight: 500;
     font-size: 1.7rem;
-}
-.form__container{
-    width: 100%;
 }
 .form__btn{
     margin: 10px auto;
@@ -416,16 +411,12 @@ ul, ol{
 }
 @media (min-width: 768px) {
     .contenedor{
-        padding: 30px 150px 10px 150px;
+        padding: 0px 150px;
     }
 }
 
 /* --- Footer para pagina con formularios --- */
 .footer-redes{
-    grid-area: redes;
-    justify-self: center;
-    align-self: center;
-
     margin: 15px auto;
 }
 .footer-redes .red__btn{
