@@ -1,0 +1,15 @@
+@import "./utils/variables";
+@import "./base/reset";
+@import "./base/typography";
+
+
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./components/hero";
+@import "./components/redBtn";
+
+@import "./pages/index.scss";
+@import "./pages/propiedades";
+@import "./pages/formularios";

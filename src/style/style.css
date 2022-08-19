@@ -1,425 +1,423 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: 'Poppins', sans-serif;
+/* ==================== VARIABLES ==================== */
+/* =================================================== */
+/* ==================== RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
-ul, ol{
-    list-style: none;
+a {
+  text-decoration: none;
 }
 
-/* ========================= NAVBAR ========================= */
-.header{
-    background-color: #fdfaff;
-    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
-}
-.nav-logo{
-    height: 50px;
-}
-.navbar-toggler{
-    border: none;
-}
-.navbar-toggler:focus{
-    box-shadow: none;
-}
-.nav-link{
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: black;
-    transition: 240ms ease-in;
+ul, ol {
+  list-style: none;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-    color: #D59A38;
-}
-.nav-link:hover{
-    color: #d3c3a2;
-    transition: 240ms ease-in;
-}
-/* ========================================================== */
-
-/* ========================== HERO ========================== */
-.hero__info{
-    position: absolute;
-    top: 20%;
-    color: white;
-    z-index: 1;
-    text-align: center;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
-}
-.hero__buttons{
-    gap: 5px;
-}
-.hero__buttons .btn{
-    font-weight: 400;
-    border: 1px solid black;
-    background-color: #232323c0;
-    color: white;
-}
-.hero__buttons .btn:hover{
-    background: #a8a8a8a6;
-    color: black;
-    transition: 250ms background ease-in;
-}
-/* ========================================================== */
-
-
-/* --- Seccion sobre nosotros - index --- */
-.sobre-nosotros{
-    position: relative;
-    margin: 50px auto;
-    height: 80vh;
-    background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
-    background-size: cover;
-}
-.sobre-nosotros__descripcion{
-    padding: 30px 10px;
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    background-color: #232323c0;
-    color: white;
-    text-align: center;
-}
-/* -------------------------------------- */
-
-/* ========================== REDES ==========================*/
-.redes{
-    height: 130px;
-
-    margin: 10px auto;
-    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
-}
-.redes__titulo{
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-align: center;
-}
-.red__btn{
-    width: 60px;
-    height: 60px;
-    margin: 0 5px;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
-    transition: all .3s ease-out;
+/* =============================================== */
+/* ==================== TYPOGRAPHY ==================== */
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-.red__btn__icon{
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
-    text-align: center;
-    transition: all .3s ease-out;
-    color: black;
+/* ==================================================== */
+/* ==================== NAVIGATION ==================== */
+.nav-logo {
+  height: 50px;
 }
 
-.red__btn__icon i{
-    font-size: 25px;
-    line-height: 60px;
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-.red__btn__text{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 60px;
-    margin-left: 10px;
-    color: #444444;
-    transition: all .3s ease-out;
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+  transition: 240ms ease-in;
+}
+.nav-link:hover {
+  color: #d3c3a2;
+  transition: 240ms ease-in;
 }
 
-@media (min-width: 768px){
-    .red__btn:hover{
-        width: 200px;
-    }
-    .red__btn:hover .red__btn__icon{
-        background: #444444;
-    }
-    .red__btn:hover .red__btn__icon i{
-        color: white;
-    }
-}
-/* ===========================================================*/
-
-
-/* ------------ Footer index ------------ */
-.donde-encontrarnos{
-    padding: 15px 0;
-}
-.donde-encontrarnos__info{
-    text-align: center;
-    margin: 5px auto;
-}
-.donde-encontrarnos__titulo{
-    padding: 10px 0;
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-.donde-encontrarnos__subtitulo{
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-.donde-encontrarnos__descripcion{
-    font-weight: 400;
-    font-size: 1rem;
-}
-/* -------------------------------------- */
-
-/* ================ PAGINA CON PROPIEDADES ================ */
-.propiedades{
-    margin-top: 10px;
-}
-.propiedades__titulo{
-    font-weight: 500;
-    font-size: 1.9rem;
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+  color: #D59A38;
 }
 
-/* --- FILTROS --- */
-.propiedades__filtro,
-.filtro__precio{
-    gap: 5px;
-}
-.filtro__precio__divisa{
-    width: min-content;
-}
-.resultados__info{
-    margin: 20px 0 5px 0;
-}
-.resultados__info span{
-    font-weight: 600;
-    font-size: 1.1em;
-}
-.filtro__btn{
-    background-color: #cecece;
-    color: black;
-    border: 1px solid #cecece;
-}
-.filtro__btn:hover{
-    background-color: #d3c3a2;
-    border: 1px solid #d3c3a2;
-}
-.filtro__buscar,
-.filtro__tipo,
-.filtro__precio__divisa,
-.filtro__precio__valor,
-.filtro__orden{
-    background-color: #cecece;
-    transition: 240ms ease-in;
-}
-.filtro__buscar:focus,
-.filtro__tipo:focus,
-.filtro__precio__divisa:focus,
-.filtro__precio__valor:focus,
-.filtro__orden:focus{
-    background-color: #d3c3a2;
-    box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
-    border: 1px solid #d3c3a2;
-    transition: 240ms ease-out;
-}
-.filtro__buscar:hover,
-.filtro__tipo:hover,
-.filtro__precio__divisa:hover,
-.filtro__precio__valor:hover,
-.filtro__orden:hover,
-.filtro__btn:hover{
-    border: 1px solid black;
+/* ==================================================== */
+/* ==================== HEADER ==================== */
+.header {
+  background-color: #fdfaff;
+  box-shadow: 0 1px 4px hsla(0deg, 4%, 15%, 0.1);
 }
 
-@media (min-width: 992px){
-    .propiedades__filtro{
-        height: 40px;
-    }
-    .filtro__tipo,
-    .filtro__orden{
-        width: min-content;
-    }
-    .filtro__precio__valor{
-        width: 100px;
-    }
-    .filtro__btn{
-        width: 40%;
-    }
+/* ================================================ */
+/* ==================== FOOTER ==================== */
+/* ---------- Footer index ---------- */
+.donde-encontrarnos {
+  padding: 15px 0;
 }
-@media (min-width: 1200px){
-    .filtro__btn{
-        width: 20%;
-    }
+.donde-encontrarnos__info {
+  text-align: center;
+  margin: 5px auto;
 }
-/* --------------- */
-
-/* ----- Manejo de Propiedades ----- */
-.propiedad{
-    box-shadow: 0 2px 3px 0 rgba(42,42,42,.05);
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #adb5be6c;
-    padding: 0;
-
-    margin: 5px;
+.donde-encontrarnos__titulo {
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
-.propiedad__img{
-    width: 100%;
+.donde-encontrarnos__subtitulo {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
-.propiedad__datos{
-    padding: 10px 10px 5px 10px;
-}
-.propiedad__descripcion{
-    font-weight: 300;
-    font-size: 0.875rem;
-    margin: 10px auto;
-}
-.propiedad__valor{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.propiedad__valor .propiedad__precio{
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-.propiedad__valor .propiedad__expensas{
-    font-weight: 400;
-    font-size: .9rem;
-}
-.propiedad__caracteristicas{
-    gap: 8px;
-    font-size: 0.875rem;
-}
-.propiedad__caracteristicas p{
-    font-weight: 400;
-}
-.propiedad__caracteristicas span{
-    font-weight: 600;
-}
-/* --------------------------------- */
-/* Control de paginas "resultados" */
-.paginas{
-    margin-top: 10px;
-}
-.page-link{
-    background-color: #cecece;
-    color: black;
-    font-weight: 500;
-}
-.page-link:hover{
-    color: #D59A38;
-}
-.page-link:focus{
-    color: #D59A38;
-}
-.active>.page-link, .page-link.active{
-    background-color: #d3c3a2;
-    border: 1px solid #d3c3a2;
+.donde-encontrarnos__descripcion {
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-/* ======================================================== */
-
-/* ================ FOOTER Comprar/Alquilar ================*/
-.footer{
-    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+/* ---------- Footer Comprar/Alquilar ---------- */
+.footer {
+  background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
 }
-.footer-general{
-    height: 250px;
-    padding: 15px 0;
+.footer-general {
+  height: 250px;
+  padding: 15px 0;
 }
-.footer__img{
-    height: 100px;
-    margin-bottom: 20px;
-}
-@media (min-width: 768px){
-    .footer-general{
-        height: 150px;
-    }
-    .footer__img{
-        margin-bottom: unset;
-    }   
-}
-/* ======================================================== */
-
-/* ================ PAGINA CON FORMULARIOS ================ */
-.content{
-    background-size: cover;
-}
-.content-1{
-    background-image: url("../images/slider/casa1.jpg");
-}
-.content-2{
-    background-image: url("../images/slider/casa2.jpg");
-}
-.contenedor{
-    max-width: 1024px;
-    min-height: calc(100vh - 76px);
-    height: 100%;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background:linear-gradient(#232323c0,#232323c0);
-}
-.form__texto{
-    color: #fdfaff;
-    text-align: center;
-}
-.form__titulo{
-    font-weight: 500;
-    font-size: 1.7rem;
-}
-.form__btn{
-    margin: 10px auto;
-    width: 30%;
+.footer__img {
+  height: 100px;
+  margin-bottom: 20px;
 }
 
-.input-form span,
-.input-form label{
-    background-color: #c0c0c0;
-    border: 1px solid black;
-}
-.input-form input,
-.input-form select,
-.input-form textarea{
-    background-color: #f4f4f4de;
-    border: 1px solid black;
-    transition: 240ms ease-in-out;
-}
-.input-form input:focus,
-.input-form select:focus,
-.input-form textarea:focus{
-    box-shadow: none;
-    border: 1px solid #D59A38;
-    transition: 240ms ease-in-out;
-}
-.form__btn{
-    background-color: #d3c3a2;
-    font-weight: 500;
-    transition: 240ms ease-in-out;
-}
-.form__btn:hover{
-    background-color: #c0c0c0;
-    border: 1px solid #D59A38;
-    color: white;
-    transition: 240ms ease-in-out;
-}
 @media (min-width: 768px) {
-    .contenedor{
-        padding: 0px 150px;
-    }
+  .footer-general {
+    height: 150px;
+  }
+  .footer__img {
+    margin-bottom: unset;
+  }
+}
+/* ---------- Footer Vender/Contacto ---------- */
+.footer-redes {
+  margin: 15px auto;
+}
+.footer-redes .red__btn {
+  background-color: rgba(255, 255, 255, 0.384);
 }
 
-/* --- Footer para pagina con formularios --- */
-.footer-redes{
-    margin: 15px auto;
+/* ================================================ */
+/* ==================== HERO ==================== */
+.hero__info {
+  position: absolute;
+  top: 20%;
+  color: white;
+  z-index: 1;
+  text-align: center;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.295);
 }
-.footer-redes .red__btn{
-    background-color: rgba(255, 255, 255, 0.384);
+
+.hero__buttons {
+  gap: 5px;
+}
+.hero__buttons .btn {
+  font-weight: 400;
+  border: 1px solid black;
+  background-color: rgba(35, 35, 35, 0.7529411765);
+  color: white;
+}
+.hero__buttons .btn:hover {
+  background: rgba(168, 168, 168, 0.6509803922);
+  color: black;
+  transition: 250ms background ease-in;
+}
+
+/* ============================================== */
+/* ==================== RED BUTTONS ==================== */
+.red__btn {
+  width: 60px;
+  height: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.red__btn__icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  color: black;
+}
+.red__btn__icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+.red__btn__text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  color: #444444;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+  .red__btn:hover {
+    width: 200px;
+  }
+  .red__btn:hover .red__btn__icon {
+    background: #444444;
+  }
+  .red__btn:hover .red__btn__icon i {
+    color: white;
+  }
+}
+/* ===================================================== */
+/* ==================== INDEX ==================== */
+/* ---------- Sobre Nosotros ---------- */
+.sobre-nosotros {
+  position: relative;
+  margin: 50px auto;
+  height: 80vh;
+  background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+  background-size: cover;
+}
+.sobre-nosotros__descripcion {
+  padding: 30px 10px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: rgba(35, 35, 35, 0.7529411765);
+  color: white;
+  text-align: center;
+}
+
+/* ---------- Redes ---------- */
+.redes {
+  height: 130px;
+  margin: 10px auto;
+  background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+}
+.redes__titulo {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* =============================================== */
+/* ==================== PROPIEDADES ==================== */
+.propiedades {
+  margin-top: 10px;
+}
+.propiedades__titulo {
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+/* ---------- FILTROS ---------- */
+.propiedades__filtro,
+.filtro__precio {
+  gap: 5px;
+}
+
+.filtro__precio__divisa {
+  width: min-content;
+}
+
+.resultados__info {
+  margin: 20px 0 5px 0;
+}
+.resultados__info span {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.filtro__btn {
+  background-color: #cecece;
+  color: black;
+  border: 1px solid #cecece;
+}
+.filtro__btn:hover {
+  background-color: #d3c3a2;
+  border: 1px solid #d3c3a2;
+}
+
+.filtro__buscar, .filtro__tipo, .filtro__precio__divisa, .filtro__precio__valor, .filtro__orden {
+  background-color: #cecece;
+  transition: 240ms ease-in;
+}
+.filtro__buscar:focus, .filtro__tipo:focus, .filtro__precio__divisa:focus, .filtro__precio__valor:focus, .filtro__orden:focus {
+  background-color: #d3c3a2;
+  box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
+  border: 1px solid #d3c3a2;
+  transition: 240ms ease-out;
+}
+.filtro__buscar:hover, .filtro__tipo:hover, .filtro__precio__divisa:hover, .filtro__precio__valor:hover, .filtro__orden:hover {
+  border: 1px solid black;
+}
+
+@media (min-width: 992px) {
+  .propiedades__filtro {
+    height: 40px;
+  }
+  .filtro__tipo, .filtro__orden {
+    width: min-content;
+  }
+  .filtro__precio__valor {
+    width: 100px;
+  }
+  .filtro__btn {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .filtro__btn {
+    width: 20%;
+  }
+}
+/* ---------- Manejo de Propiedades ---------- */
+.propiedad {
+  box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid rgba(173, 181, 190, 0.4235294118);
+  padding: 0;
+  margin: 5px;
+}
+.propiedad__img {
+  width: 100%;
+}
+.propiedad__datos {
+  padding: 10px 10px 5px 10px;
+}
+.propiedad__descripcion {
+  font-weight: 300;
+  font-size: 0.875rem;
+  margin: 10px auto;
+}
+.propiedad__valor {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.propiedad__valor .propiedad__precio {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.propiedad__valor .propiedad__expensas {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.propiedad__caracteristicas {
+  gap: 8px;
+  font-size: 0.875rem;
+}
+.propiedad__caracteristicas p {
+  font-weight: 400;
+}
+.propiedad__caracteristicas span {
+  font-weight: 600;
+}
+
+/* ---------- Control de paginas "resultados" ---------- */
+.paginas {
+  margin-top: 10px;
+}
+
+.page-link {
+  background-color: #cecece;
+  color: black;
+  font-weight: 500;
+}
+.page-link:hover {
+  color: #D59A38;
+}
+.page-link:focus {
+  color: #D59A38;
+}
+
+.active > .page-link, .page-link.active {
+  background-color: #d3c3a2;
+  border: 1px solid #d3c3a2;
+}
+
+/* ======================================================== */
+/* ================ PAGINA CON FORMULARIOS ================ */
+.content {
+  background-size: cover;
+}
+.content-1 {
+  background-image: url("../images/slider/casa1.jpg");
+}
+.content-2 {
+  background-image: url("../images/slider/casa2.jpg");
+}
+
+.contenedor {
+  max-width: 1024px;
+  min-height: calc(100vh - 76px);
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(35, 35, 35, 0.7529411765), rgba(35, 35, 35, 0.7529411765));
+}
+
+.form__texto {
+  color: #fdfaff;
+  text-align: center;
+}
+.form__titulo {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+.form__btn {
+  margin: 10px auto;
+  width: 30%;
+}
+
+.input-form span, .input-form label {
+  background-color: #c0c0c0;
+  border: 1px solid black;
+}
+.input-form input, .input-form select, .input-form textarea {
+  background-color: rgba(244, 244, 244, 0.8705882353);
+  border: 1px solid black;
+  transition: 240ms ease-in-out;
+}
+.input-form input:focus, .input-form select:focus, .input-form textarea:focus {
+  box-shadow: none;
+  border: 1px solid #D59A38;
+  transition: 240ms ease-in-out;
+}
+
+.form__btn {
+  background-color: #d3c3a2;
+  font-weight: 500;
+  transition: 240ms ease-in-out;
+}
+.form__btn:hover {
+  background-color: #c0c0c0;
+  border: 1px solid #D59A38;
+  color: white;
+  transition: 240ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    padding: 0px 150px;
+  }
 }
 /* ======================================================== */
+
+/*# sourceMappingURL=style.css.map */

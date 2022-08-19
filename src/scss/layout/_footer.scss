@@ -1,0 +1,57 @@
+/* ==================== FOOTER ==================== */
+
+/* ---------- Footer index ---------- */
+.donde-encontrarnos{
+    padding: 15px 0;
+    &__info{
+        text-align: center;
+        margin: 5px auto;
+    }
+    &__titulo{
+        padding: 10px 0;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    &__subtitulo{
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    &__descripcion{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+
+/* ---------- Footer Comprar/Alquilar ---------- */
+.footer{
+    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+    &-general{
+        height: 250px;
+        padding: 15px 0;
+    }
+    &__img{
+        height: 100px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 768px){
+    .footer{
+        &-general{
+            height: 150px;
+        }
+        &__img{
+            margin-bottom: unset;
+        }
+    }
+}
+
+/* ---------- Footer Vender/Contacto ---------- */
+
+.footer-redes{
+    margin: 15px auto;
+    .red__btn{
+        background-color: rgba(255, 255, 255, 0.384);
+    }
+}
+
+/* ================================================ */

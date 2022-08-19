@@ -1,0 +1,36 @@
+/* ==================== INDEX ==================== */
+
+/* ---------- Sobre Nosotros ---------- */
+.sobre-nosotros{
+    position: relative;
+    margin: 50px auto;
+    height: 80vh;
+    background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+    background-size: cover;
+    &__descripcion{
+        padding: 30px 10px;
+    
+        position: absolute;
+        top: 50%;
+        left: 0;
+    
+        background-color: #232323c0;
+        color: white;
+        text-align: center;
+    }
+}
+
+/* ---------- Redes ---------- */
+.redes{
+    height: 130px;
+
+    margin: 10px auto;
+    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+    &__titulo{
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* =============================================== */

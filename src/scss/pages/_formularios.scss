@@ -1,0 +1,72 @@
+/* ================ PAGINA CON FORMULARIOS ================ */
+.content{
+    background-size: cover;
+    &-1{
+        background-image: url("../images/slider/casa1.jpg");
+    }
+    &-2{
+        background-image: url("../images/slider/casa2.jpg");
+    }
+}
+
+.contenedor{
+    max-width: 1024px;
+    min-height: calc(100vh - 76px);
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background:linear-gradient(#232323c0,#232323c0);
+}
+.form{
+    &__texto{
+        color: #fdfaff;
+        text-align: center;
+    }
+    &__titulo{
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+    &__btn{
+        margin: 10px auto;
+        width: 30%;
+    }
+}
+
+.input-form{
+    span, label{
+        background-color: #c0c0c0;
+        border: 1px solid black;
+    }
+
+    input, select, textarea{
+        background-color: #f4f4f4de;
+        border: 1px solid black;
+        transition: 240ms ease-in-out;
+
+        &:focus{
+            box-shadow: none;
+            border: 1px solid #D59A38;
+            transition: 240ms ease-in-out;
+        }
+    }
+}
+
+.form__btn{
+    background-color: #d3c3a2;
+    font-weight: 500;
+    transition: 240ms ease-in-out;
+    &:hover{
+        background-color: #c0c0c0;
+        border: 1px solid #D59A38;
+        color: white;
+        transition: 240ms ease-in-out;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        padding: 0px 150px;
+    }
+}
+
+/* ======================================================== */

@@ -1,0 +1,29 @@
+/* ==================== NAVIGATION ==================== */
+
+.nav-logo{
+    height: 50px;
+}
+.navbar-toggler{
+    border: none;
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+.nav-link{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    transition: 240ms ease-in;
+
+    &:hover{
+        color: #d3c3a2;
+        transition: 240ms ease-in;
+    }
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: #D59A38;
+}
+
+/* ==================================================== */
