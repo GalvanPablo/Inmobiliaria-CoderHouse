@@ -24,24 +24,24 @@
 }
 
 .filtro__btn{
-    background-color: #cecece;
+    background-color: $color-gris-claro;
     color: black;
-    border: 1px solid #cecece;
+    border: 1px solid $color-gris-claro;
 
     &:hover{
-        background-color: #d3c3a2;
-        border: 1px solid #d3c3a2;
+        background-color: $color-destacado-1;
+        border: 1px solid $color-destacado-1;
     }
 }
 
 .filtro{
     &__buscar, &__tipo, &__precio__divisa, &__precio__valor, &__orden{
-        background-color: #cecece;
+        background-color: $color-gris-claro;
         transition: 240ms ease-in;
         &:focus{
-            background-color: #d3c3a2;
+            background-color: $color-destacado-1;
             box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
-            border: 1px solid #d3c3a2;
+            border: 1px solid $color-destacado-1;
             transition: 240ms ease-out;
         }
 
@@ -126,19 +126,19 @@
     margin-top: 10px;
 }
 .page-link{
-    background-color: #cecece;
+    background-color: $color-gris-claro;
     color: black;
     font-weight: 500;
     &:hover{
-        color: #D59A38;
+        color: $color-destacado-2;
     }
     &:focus{
-        color: #D59A38;
+        color: $color-destacado-2;
     }
 }
 .active>.page-link, .page-link.active{
-    background-color: #d3c3a2;
-    border: 1px solid #d3c3a2;
+    background-color: $color-destacado-1;
+    border: 1px solid $color-destacado-1;
 }
 
 /* ======================================================== */

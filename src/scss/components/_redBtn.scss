@@ -33,7 +33,7 @@
         font-weight: 500;
         line-height: 60px;
         margin-left: 10px;
-        color: #444444;
+        color: $color-gris;
         transition: all .3s ease-out;
     }
 }
@@ -44,7 +44,7 @@
             width: 200px;
         }
         &:hover .red__btn__icon{
-            background: #444444;
+            background: $color-gris;
             i{
                 color: white;
             }

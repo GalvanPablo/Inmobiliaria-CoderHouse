@@ -45,19 +45,19 @@
 
         &:focus{
             box-shadow: none;
-            border: 1px solid #D59A38;
+            border: 1px solid $color-destacado-2;
             transition: 240ms ease-in-out;
         }
     }
 }
 
 .form__btn{
-    background-color: #d3c3a2;
+    background-color: $color-destacado-1;
     font-weight: 500;
     transition: 240ms ease-in-out;
     &:hover{
         background-color: #c0c0c0;
-        border: 1px solid #D59A38;
+        border: 1px solid $color-destacado-2;
         color: white;
         transition: 240ms ease-in-out;
     }

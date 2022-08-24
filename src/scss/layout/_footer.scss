@@ -24,7 +24,7 @@
 
 /* ---------- Footer Comprar/Alquilar ---------- */
 .footer{
-    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+    background: linear-gradient(315deg, $color-gris-claro 0%, #adb5be 74%);
     &-general{
         height: 250px;
         padding: 15px 0;

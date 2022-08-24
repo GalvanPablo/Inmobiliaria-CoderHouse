@@ -25,7 +25,7 @@
     height: 130px;
 
     margin: 10px auto;
-    background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
+    background: linear-gradient(315deg, $color-gris-claro 0%, #adb5be 74%);
     &__titulo{
         font-weight: 400;
         font-size: 1.5rem;

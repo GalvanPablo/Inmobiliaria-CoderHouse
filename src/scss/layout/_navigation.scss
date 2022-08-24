@@ -17,13 +17,13 @@
     transition: 240ms ease-in;
 
     &:hover{
-        color: #d3c3a2;
+        color: $color-destacado-1;
         transition: 240ms ease-in;
     }
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-    color: #D59A38;
+    color: $color-destacado-2;
 }
 
 /* ==================================================== */
