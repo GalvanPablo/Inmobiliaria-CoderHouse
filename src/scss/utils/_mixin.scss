@@ -1,0 +1,12 @@
+/* ==================== MIXINS ==================== */
+
+@mixin texto($size, $weight, $align: 0) {
+    font-size: $size;
+    font-weight: $weight;
+
+    @if($align != 0){
+        text-align: $align;
+    }
+}
+
+/* ================================================ */

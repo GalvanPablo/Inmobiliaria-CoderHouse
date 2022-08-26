@@ -2,8 +2,7 @@
 .propiedades{
     margin-top: 10px;
     &__titulo{
-        font-weight: 500;
-        font-size: 1.9rem;
+        @include texto(1.9rem, 500);
     }
 }
 
@@ -18,8 +17,7 @@
 .resultados__info{
     margin: 20px 0 5px 0;
     span{
-        font-weight: 600;
-        font-size: 1.1em;
+        @include texto(1.1em, 600);
     }
 }
 
@@ -91,8 +89,7 @@
         padding: 10px 10px 5px 10px;
     }
     &__descripcion{
-        font-weight: 300;
-        font-size: 0.875rem;
+        @include texto(0.875rem, 300);
         margin: 10px auto;
     }
     &__valor{
@@ -101,12 +98,10 @@
         gap: 5px;
     }
     &__valor .propiedad__precio{
-        font-weight: 700;
-        font-size: 1.2rem;
+        @include texto(1.2rem, 700);
     }
     &__valor .propiedad__expensas{
-        font-weight: 400;
-        font-size: .9rem;
+        @include texto(.9rem, 400);
     }
     &__caracteristicas{
         gap: 8px;

@@ -1,5 +1,7 @@
 /* ==================== VARIABLES ==================== */
 /* =================================================== */
+/* ==================== MIXINS ==================== */
+/* ================================================ */
 /* ==================== RESET ==================== */
 * {
   margin: 0;
@@ -68,16 +70,16 @@ ul, ol {
 }
 .donde-encontrarnos__titulo {
   padding: 10px 0;
-  font-weight: 500;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 .donde-encontrarnos__subtitulo {
-  font-weight: 500;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 .donde-encontrarnos__descripcion {
-  font-weight: 400;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 /* ---------- Footer Comprar/Alquilar ---------- */
@@ -210,8 +212,8 @@ ul, ol {
   background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
 }
 .redes__titulo {
-  font-weight: 400;
   font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -221,8 +223,8 @@ ul, ol {
   margin-top: 10px;
 }
 .propiedades__titulo {
-  font-weight: 500;
   font-size: 1.9rem;
+  font-weight: 500;
 }
 
 /* ---------- FILTROS ---------- */
@@ -239,8 +241,8 @@ ul, ol {
   margin: 20px 0 5px 0;
 }
 .resultados__info span {
-  font-weight: 600;
   font-size: 1.1em;
+  font-weight: 600;
 }
 
 .filtro__btn {
@@ -302,8 +304,8 @@ ul, ol {
   padding: 10px 10px 5px 10px;
 }
 .propiedad__descripcion {
-  font-weight: 300;
   font-size: 0.875rem;
+  font-weight: 300;
   margin: 10px auto;
 }
 .propiedad__valor {
@@ -312,12 +314,12 @@ ul, ol {
   gap: 5px;
 }
 .propiedad__valor .propiedad__precio {
-  font-weight: 700;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 .propiedad__valor .propiedad__expensas {
-  font-weight: 400;
   font-size: 0.9rem;
+  font-weight: 400;
 }
 .propiedad__caracteristicas {
   gap: 8px;
@@ -378,8 +380,8 @@ ul, ol {
   text-align: center;
 }
 .form__titulo {
-  font-weight: 500;
   font-size: 1.7rem;
+  font-weight: 500;
 }
 .form__btn {
   margin: 10px auto;

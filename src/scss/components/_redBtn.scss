@@ -29,8 +29,7 @@
     }
 
     &__text{
-        font-size: 20px;
-        font-weight: 500;
+        @include texto(20px, 500);
         line-height: 60px;
         margin-left: 10px;
         color: $color-gris;

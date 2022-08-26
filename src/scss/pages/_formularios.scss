@@ -23,8 +23,7 @@
         text-align: center;
     }
     &__titulo{
-        font-weight: 500;
-        font-size: 1.7rem;
+        @include texto(1.7rem, 500);
     }
     &__btn{
         margin: 10px auto;
