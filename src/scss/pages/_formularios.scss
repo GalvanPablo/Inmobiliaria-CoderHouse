@@ -1,12 +1,15 @@
 /* ================ PAGINA CON FORMULARIOS ================ */
-.content{
+%fondo{
+    background-color: unset;
     background-size: cover;
-    &-1{
-        background-image: url("../images/slider/casa5.webp");
-    }
-    &-2{
-        background-image: url("../images/slider/casa2.webp");
-    }
+}
+.content-1{
+    @extend %fondo;
+    background-image: url("../images/slider/casa5.webp");
+}
+.content-2{
+    @extend %fondo;
+    background-image: url("../images/slider/casa2.webp");
 }
 
 .contenedor{
@@ -44,19 +47,19 @@
 
         &:focus{
             box-shadow: none;
-            border: 1px solid $color-destacado-2;
+            border: 1px solid map-get($color-principal, "destacado");
             transition: 240ms ease-in-out;
         }
     }
 }
 
 .form__btn{
-    background-color: $color-destacado-1;
+    background-color: map-get($color-principal, "opaco");
     font-weight: 500;
     transition: 240ms ease-in-out;
     &:hover{
         background-color: #c0c0c0;
-        border: 1px solid $color-destacado-2;
+        border: 1px solid map-get($color-principal, "destacado");
         color: white;
         transition: 240ms ease-in-out;
     }

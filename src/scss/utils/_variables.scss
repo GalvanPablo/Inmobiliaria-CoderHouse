@@ -1,8 +1,13 @@
 /* ==================== VARIABLES ==================== */
 
-$color-gris: #444444;
-$color-gris-claro: #cecece;
-$color-destacado-1: #d3c3a2;
-$color-destacado-2: #D59A38;
+$color-principal: (
+    destacado: #D59A38,
+    opacado: #d3c3a2
+);
+
+$color-gris: (
+    claro: #cecece,
+    oscuro: #444444
+);
 
 /* =================================================== */

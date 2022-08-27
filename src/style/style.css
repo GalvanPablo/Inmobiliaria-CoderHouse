@@ -251,8 +251,7 @@ ul, ol {
   border: 1px solid #cecece;
 }
 .filtro__btn:hover {
-  background-color: #d3c3a2;
-  border: 1px solid #d3c3a2;
+  border: 1px solid;
 }
 
 .filtro__buscar, .filtro__tipo, .filtro__precio__divisa, .filtro__precio__valor, .filtro__orden {
@@ -260,9 +259,8 @@ ul, ol {
   transition: 240ms ease-in;
 }
 .filtro__buscar:focus, .filtro__tipo:focus, .filtro__precio__divisa:focus, .filtro__precio__valor:focus, .filtro__orden:focus {
-  background-color: #d3c3a2;
   box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
-  border: 1px solid #d3c3a2;
+  border: 1px solid;
   transition: 240ms ease-out;
 }
 .filtro__buscar:hover, .filtro__tipo:hover, .filtro__precio__divisa:hover, .filtro__precio__valor:hover, .filtro__orden:hover {
@@ -350,18 +348,20 @@ ul, ol {
 }
 
 .active > .page-link, .page-link.active {
-  background-color: #d3c3a2;
-  border: 1px solid #d3c3a2;
+  border: 1px solid;
 }
 
 /* ======================================================== */
 /* ================ PAGINA CON FORMULARIOS ================ */
-.content {
+.content-2, .content-1 {
+  background-color: unset;
   background-size: cover;
 }
+
 .content-1 {
   background-image: url("../images/slider/casa5.webp");
 }
+
 .content-2 {
   background-image: url("../images/slider/casa2.webp");
 }
@@ -404,7 +404,6 @@ ul, ol {
 }
 
 .form__btn {
-  background-color: #d3c3a2;
   font-weight: 500;
   transition: 240ms ease-in-out;
 }

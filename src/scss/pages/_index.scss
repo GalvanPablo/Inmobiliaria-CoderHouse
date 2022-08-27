@@ -25,7 +25,7 @@
     height: 130px;
 
     margin: 10px auto;
-    background: linear-gradient(315deg, $color-gris-claro 0%, #adb5be 74%);
+    background: linear-gradient(315deg, map-get($color-gris, "claro") 0%, #adb5be 74%);
     &__titulo{
         @include texto(1.5rem, 400, center);
     }

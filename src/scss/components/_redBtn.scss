@@ -32,7 +32,7 @@
         @include texto(20px, 500);
         line-height: 60px;
         margin-left: 10px;
-        color: $color-gris;
+        color: map-get($color-gris, "oscuro");
         transition: all .3s ease-out;
     }
 }
@@ -43,7 +43,7 @@
             width: 200px;
         }
         &:hover .red__btn__icon{
-            background: $color-gris;
+            background: map-get($color-gris, "oscuro");
             i{
                 color: white;
             }
