@@ -22,24 +22,28 @@
 }
 
 .filtro__btn{
-    background-color: map-get($color-gris, "claro");
+    background-color: $color-gris-claro;
     color: black;
-    border: 1px solid map-get($color-gris, "claro");
+    border: 1px solid $color-gris-claro;
 
+    &:focus{
+        background-color: $color-principal-opaco;
+        border: 1px solid $color-principal-opaco;
+    }
     &:hover{
-        background-color: map-get($color-principal, "opaco");
-        border: 1px solid map-get($color-principal, "opaco");
+        background-color: $color-principal-opaco;
+        border: 1px solid $color-principal-opaco;
     }
 }
 
 .filtro{
     &__buscar, &__tipo, &__precio__divisa, &__precio__valor, &__orden{
-        background-color: map-get($color-gris, "claro");
+        background-color: $color-gris-claro;
         transition: 240ms ease-in;
         &:focus{
-            background-color: map-get($color-principal, "opaco");
+            background-color: $color-principal-opaco;
             box-shadow: 0px 0px 10px 5px rgba(211, 195, 162, 0.3);
-            border: 1px solid map-get($color-principal, "opaco");
+            border: 1px solid $color-principal-opaco;
             transition: 240ms ease-out;
         }
 
@@ -121,19 +125,19 @@
     margin-top: 10px;
 }
 .page-link{
-    background-color: map-get($color-gris, "claro");
+    background-color: $color-gris-claro;
     color: black;
     font-weight: 500;
     &:hover{
-        color: map-get($color-principal, "destacado");
+        color: $color-principal-destacado;
     }
     &:focus{
-        color: map-get($color-principal, "destacado");
+        color: $color-principal-destacado;
     }
 }
-.active>.page-link, .page-link.active{
-    background-color: map-get($color-principal, "opaco");
-    border: 1px solid map-get($color-principal, "opaco");
+.active>.page-link, .page-link.active {
+    background-color: $color-principal-destacado;
+    border: 1px solid $color-principal-opaco;
 }
 
 /* ======================================================== */

@@ -16,13 +16,13 @@
     transition: 240ms ease-in;
 
     &:hover{
-        color: map-get($color-principal, "opacado");
+        color: $color-principal-opaco;
         transition: 240ms ease-in;
     }
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-    color: map-get($color-principal, "destacado");
+    color: $color-principal-destacado;
 }
 
 /* ==================================================== */

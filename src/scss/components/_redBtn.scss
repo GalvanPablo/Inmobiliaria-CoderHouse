@@ -3,50 +3,24 @@
 .red__btn{
     width: 60px;
     height: 60px;
-    margin: 0 5px;
-    overflow: hidden;
     background-color: #fff;
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
-    transition: all .3s ease-out;
 
-    &__icon{
+    &__link{
         display: inline-block;
         width: 60px;
         height: 60px;
-        border-radius: 50px;
-        box-sizing: border-box;
         line-height: 60px;
         text-align: center;
         transition: all .3s ease-out;
         color: black;
+        @include texto(1.8rem, 500);
 
-        i{
-            font-size: 25px;
-            line-height: 60px;
-        }
-    }
-
-    &__text{
-        @include texto(20px, 500);
-        line-height: 60px;
-        margin-left: 10px;
-        color: map-get($color-gris, "oscuro");
-        transition: all .3s ease-out;
-    }
-}
-
-@media (min-width: 768px){
-    .red__btn{
         &:hover{
-            width: 200px;
-        }
-        &:hover .red__btn__icon{
-            background: map-get($color-gris, "oscuro");
-            i{
-                color: white;
-            }
+            color: $color-gris-claro;
+            transition: all .3s ease-out;
         }
     }
 }

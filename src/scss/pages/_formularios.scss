@@ -47,19 +47,19 @@
 
         &:focus{
             box-shadow: none;
-            border: 1px solid map-get($color-principal, "destacado");
+            border: 1px solid $color-principal-destacado;
             transition: 240ms ease-in-out;
         }
     }
 }
 
 .form__btn{
-    background-color: map-get($color-principal, "opaco");
+    background-color: $color-principal-opaco;
     font-weight: 500;
     transition: 240ms ease-in-out;
     &:hover{
         background-color: #c0c0c0;
-        border: 1px solid map-get($color-principal, "destacado");
+        border: 1px solid $color-principal-destacado;
         color: white;
         transition: 240ms ease-in-out;
     }
