@@ -15,38 +15,40 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="container-xl">
-            <a href="../../index.html" class="navbar-brand"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urb4n Inmbobiliaria" class="nav-logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./comprar.html" class="nav-link active" aria-current="Propiedades en venta">Comprar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./alquilar.html" class="nav-link">Alquilar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./vender.html" class="nav-link">Vender</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./contacto.html" class="nav-link">Contacto</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-xl">
+                <a href="../../index.html" class="navbar-brand"><img src="../images/brand/inmobiliaria-logo1.png" alt="Urb4n Inmbobiliaria" class="nav-logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./comprar.html" class="nav-link active" aria-current="Propiedades en venta">Comprar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./alquilar.html" class="nav-link">Alquilar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./vender.html" class="nav-link">Vender</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
     <main class="main main--propiedades">
         <div class="propiedades container">
             <h1 class="propiedades__titulo">Propiedades en venta</h1>
-
+            
+            <!-- FILTROS -->
             <div class="d-flex flex-column flex-lg-row propiedades__filtro">
                 <input type="search" name="buscar" id="buscar" placeholder="Buscar" class="form-control filtro__buscar">
                 <select name="tipo-propiedad" id="tipo-propiedad" class="form-select filtro__tipo">
@@ -78,12 +80,14 @@
             </div>
             <p class="resultados__info"><span>5</span> resultados encontrados</p>
 
+            <!-- CONTAINER DE PROPIEDADES -->
             <div class="propiedades container-lg row g-2">
+                <!-- Propiedad 1 -->
                 <div class="col col-md-6 col-lg-4">
-                    <div class="propiedad m-1">
-                        <img src="../images/propiedades/en_venta/propiedad1.webp" alt="Urb4n Propiedad 1" class="propiedad__img">
+                    <div class="propiedad m-1"> <!-- tarjeta -->
+                        <img src="../images/propiedades/en_venta/propiedad1.webp" alt="Urb4n - casa en venta 3 ambientes, 2 baños y 2 dormitorios" class="propiedad__img">
                         <div class="propiedad__datos">
-                            <p class="propiedad__descripcion text-truncate">Casa en venta en Los Robles 2700, Francisco Alvarez, Moreno, Buenos Aires</p>
+                            <h2 class="propiedad__descripcion text-truncate">Casa en venta en Los Robles 2700, Francisco Alvarez, Moreno, Buenos Aires</h2>
                             <div class="propiedad__valor">
                                 <p class="propiedad__precio">49.900 USD</p>
                                 <p class="propiedad__expensas">+ 25.000 ARS expensas</p>
@@ -100,11 +104,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Propiedad 2 -->
                 <div class="col col-md-6 col-lg-4">
-                    <div class="propiedad m-1">
-                        <img src="../images/propiedades/en_venta/propiedad2.webp" alt="Urb4n Propiedad 2" class="propiedad__img">
+                    <div class="propiedad m-1"> <!-- tarjeta -->
+                        <img src="../images/propiedades/en_venta/propiedad2.webp" alt="Urb4n - departamento en venta 3 ambientes" class="propiedad__img">
                         <div class="propiedad__datos">
-                            <p class="propiedad__descripcion text-truncate">Departamento en venta en Avenida Colón 5000, Cordoba, Capital, Córdoba</p>
+                            <h2 class="propiedad__descripcion text-truncate">Departamento en venta en Avenida Colón 5000, Cordoba, Capital, Córdoba</h2>
                             <div class="propiedad__valor">
                                 <p class="propiedad__precio">63.000 USD</p>
                                 <p class="propiedad__expensas">+ 6.500 ARS expensas</p>
@@ -121,11 +126,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Propiedad 3 -->
                 <div class="col col-md-6 col-lg-4">
-                    <div class="propiedad m-1">
-                        <img src="../images/propiedades/en_venta/propiedad3.webp" alt="Urb4n Propiedad 3" class="propiedad__img">
+                    <div class="propiedad m-1"> <!-- tarjeta -->
+                        <img src="../images/propiedades/en_venta/propiedad3.webp" alt="Urb4n - casa en venta 4 ambientes, 2 baños y 3 dormitorios" class="propiedad__img">
                         <div class="propiedad__datos">
-                            <p class="propiedad__descripcion text-truncate">Casa en venta en B° Las Terrazas Mza 111  Lote 04 0, V.escondido-las Terrazas, Cordoba, Capital, Córdoba</p>
+                            <h2 class="propiedad__descripcion text-truncate">Casa en venta en B° Las Terrazas Mza 111  Lote 04 0, V.escondido-las Terrazas, Cordoba, Capital, Córdoba</h2>
                             <div class="propiedad__valor">
                                 <p class="propiedad__precio">290.000 USD</p>
                                 <p class="propiedad__expensas">+ 20.000 ARS expensas</p>
@@ -135,38 +141,40 @@
                                 <p><span>215</span> m² cubiertos</p>
                             </div>
                             <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
-                                <p><span>7</span> ambientes</p>
+                                <p><span>4</span> ambientes</p>
                                 <p><span>2</span> baños</p>
+                                <p><span>3</span> dormitorios</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Propiedad 4 -->
+                <div class="col col-md-6 col-lg-4">
+                    <div class="propiedad m-1"> <!-- tarjeta -->
+                        <img src="../images/propiedades/en_venta/propiedad4.webp" alt="Urb4n - casa en venta 2 ambientes, 1 baño y 2 dormitorios" class="propiedad__img">
+                        <div class="propiedad__datos">
+                            <h2 class="propiedad__descripcion text-truncate">Casa en venta en Emilio Engler 2400, Pujato Norte, Las Colonias, Santa Fe</h2>
+                            <div class="propiedad__valor">
+                                <p class="propiedad__precio">Solicitar precio</p>
+                            </div>
+                            <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
+                                <p><span>439.86</span> m² totales</p>
+                                <p><span>128.05</span> m² cubiertos</p>
+                            </div>
+                            <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
+                                <p><span>2</span> ambientes</p>
+                                <p><span>1</span> baño</p>
                                 <p><span>2</span> dormitorios</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Propiedad 5 -->
                 <div class="col col-md-6 col-lg-4">
-                    <div class="propiedad m-1">
-                        <img src="../images/propiedades/en_venta/propiedad4.webp" alt="Urb4n Propiedad 4" class="propiedad__img">
+                    <div class="propiedad m-1"> <!-- tarjeta -->
+                        <img src="../images/propiedades/en_venta/propiedad5.webp" alt="Urb4n 6 ambientes, 4 baños y 4 dormitorios" class="propiedad__img">
                         <div class="propiedad__datos">
-                        <p class="propiedad__descripcion text-truncate">Casa en venta en Emilio Engler 2400, Pujato Norte, Las Colonias, Santa Fe</p>
-                        <div class="propiedad__valor">
-                            <p class="propiedad__precio">Solicitar precio</p>
-                        </div>
-                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
-                            <p><span>439.86</span> m² totales</p>
-                            <p><span>128.05</span> m² cubiertos</p>
-                        </div>
-                        <div class="propiedad__caracteristicas d-flex flex-row align-items-center">
-                            <p><span>7</span> ambientes</p>
-                            <p><span>2</span> baños</p>
-                            <p><span>2</span> dormitorios</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="col col-md-6 col-lg-4">
-                    <div class="propiedad m-1">
-                        <img src="../images/propiedades/en_venta/propiedad5.webp" alt="Urb4n Propiedad 5" class="propiedad__img">
-                        <div class="propiedad__datos">
-                            <p class="propiedad__descripcion text-truncate">Casa en venta en Obispo Boneo 300, Guadalupe, Santa Fe, Santa Fe Capital, Santa Fe</p>
+                            <h2 class="propiedad__descripcion text-truncate">Casa en venta en Obispo Boneo 300, Guadalupe, Santa Fe, Santa Fe Capital, Santa Fe</h2>
                             <div class="propiedad__valor">
                                 <p class="propiedad__precio">Solicitar precio</p>
                             </div>
@@ -184,11 +192,12 @@
                 </div>
             </div>
 
-            <nav aria-label="Resultados encontrados" class="paginas">
+            <!-- Paginación -->
+            <nav aria-label="Páginas de resultados encontrados" class="paginas">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled"><a class="page-link">Anterior</a></li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item" aria-current="page"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
                 </ul>
@@ -198,7 +207,10 @@
 
     <footer class="footer">
         <div class="footer-general container d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-between">
-            <img src="../images/brand/inmobiliaria-logo2.png" alt="Urb4n Inmbobiliaria Logo2" class="footer__img">
+            <!-- LOGO -->
+            <img src="../images/brand/inmobiliaria-logo2.png" alt="Urb4n Inmbobiliaria" class="footer__img">
+
+            <!-- REDES -->
             <section class="redes__footer">
                 <div class="redes__container d-flex">
                     <div class="red__btn">

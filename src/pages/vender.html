@@ -51,24 +51,24 @@
             </div>
             <form action="#" class="form__container d-flex flex-column justify-content-center">
                 <div class="input-group input-group-sm mb-3 input-form">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Nombre y apellido" aria-label="Nombre de usuario">
+                    <label class="input-group-text" for="nombre">@</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre y apellido" aria-label="Nombre de usuario">
                 </div>
                 <div class="input-group input-group-sm mb-3 input-form input-form">
-                    <span class="input-group-text" id="basic-addon2">Email</span>
-                    <input type="mail" class="form-control" placeholder="ejemplo@correo.com" aria-label="Nombre de usuario del destinatario">
+                    <label class="input-group-text" for="email">Email</label>
+                    <input type="mail" id="email" class="form-control" placeholder="ejemplo@correo.com" aria-label="Nombre de usuario del destinatario">
                 </div>
                 <div class="input-group input-group-sm mb-3 input-form">
-                    <span class="input-group-text" id="basic-addon1">Teléfono</span>
-                    <input type="tel" class="form-control" placeholder="+54 9 11 1234-5678" aria-label="telefono">
+                    <label class="input-group-text" for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" class="form-control" placeholder="+54 9 11 1234-5678" aria-label="telefono">
                 </div>
                 <div class="input-group input-group-sm mb-3 input-form">
-                    <span class="input-group-text" id="basic-addon1">Ubicación</span>
-                    <input type="text" class="form-control" placeholder="Localidad/Provincia" aria-label="ubicacion">
+                    <label class="input-group-text" for="ubicacion">Ubicación</label>
+                    <input type="text" id="ubicacion" class="form-control" placeholder="Localidad/Provincia" aria-label="ubicacion">
                 </div>
                 <div class="input-group input-group-sm mb-3 input-form">
-                    <label class="input-group-text" for="inputGroupSelect01">Tipo propiedad</label>
-                    <select class="form-select" id="inputGroupSelect01">
+                    <label class="input-group-text" for="select_tipoPropiedad">Tipo propiedad</label>
+                    <select class="form-select" id="select_tipoPropiedad">
                         <option selected disabled value="">Seleccionar...</option>
                         <option value="tipo-casa" class="form__cbox__option">Casa</option>
                         <option value="tipo-departamento" class="form__cbox__option">Departamento</option>
@@ -83,9 +83,9 @@
                     </select>
                 </div>
                 <div class="input-group input-group-sm input-form">
-                    <textarea class="form-control" aria-label="With textarea" rows="5" placeholder="Comentarios"></textarea>
+                    <textarea class="form-control" aria-label="Comentarios" rows="5" placeholder="Comentarios"></textarea>
                 </div>
-                <button class="btn btn-outline-secondary form__btn" type="button" id="button-addon1">Enviar</button>
+                <button class="btn btn-outline-secondary form__btn" type="button" id="btn_enviar">Enviar</button>
             </form>
         </main>
         <footer class="footer-redes">
