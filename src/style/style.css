@@ -192,7 +192,7 @@ ul, ol {
   position: relative;
   margin: 50px auto;
   height: 80vh;
-  background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+  background-image: url("../images/sobre_nosotros/sobre-nosotros-mobile.jpg");
   background-size: cover;
 }
 .sobre-nosotros__descripcion {
@@ -205,6 +205,11 @@ ul, ol {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+  }
+}
 /* ---------- Redes ---------- */
 .redes {
   height: 130px;
