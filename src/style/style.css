@@ -198,16 +198,37 @@ ul, ol {
 .sobre-nosotros__descripcion {
   padding: 30px 10px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   background-color: rgba(35, 35, 35, 0.7529411765);
   color: white;
   text-align: center;
 }
+.sobre-nosotros__titulo {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.sobre-nosotros__parrafo {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
 
 @media (min-width: 768px) {
   .sobre-nosotros {
     background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .sobre-nosotros__descripcion {
+    top: 60%;
+  }
+  .sobre-nosotros__titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .sobre-nosotros__parrafo {
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 /* ---------- Redes ---------- */

@@ -12,17 +12,36 @@
         padding: 30px 10px;
     
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 0;
     
         background-color: #232323c0;
         color: white;
         text-align: center;
     }
+    &__titulo{
+        @include texto(1.2rem, 600);
+    }
+    &__parrafo{
+        @include texto(.9rem, 400);
+    }
 }
 @media (min-width: 768px){
     .sobre-nosotros{
         background-image: url("../images/sobre_nosotros/sobre-nosotros.jpg");
+    }
+}
+@media (min-width: 1024px){
+    .sobre-nosotros{
+        &__descripcion{
+            top: 60%;
+        }
+        &__titulo{
+            @include texto(1.3rem, 600);
+        }
+        &__parrafo{
+            @include texto(1rem, 400);
+        }
     }
 }
 
