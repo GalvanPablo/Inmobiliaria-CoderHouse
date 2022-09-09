@@ -86,28 +86,38 @@ ul, ol {
 .footer {
   background: linear-gradient(315deg, #cecece 0%, #adb5be 74%);
 }
-.footer-general {
-  height: 250px;
-  padding: 15px 0;
-}
 .footer__img {
   height: 100px;
-  margin-bottom: 20px;
+}
+.footer__contacto__link {
+  color: #444444;
+  transition: all 200ms ease-out;
+}
+.footer__contacto__link i {
+  color: #444444;
+  font-size: 24px;
+}
+.footer__contacto__link:hover {
+  color: #D59A38;
+  transition: all 220ms ease-in;
+}
+.footer__redes__link {
+  color: #444444;
+  transition: all 200ms ease-out;
+}
+.footer__redes__link i {
+  font-size: 32px;
+}
+.footer__redes__link:hover {
+  color: #D59A38;
+  transition: all 220ms ease-in;
 }
 
-@media (min-width: 768px) {
-  .footer-general {
-    height: 150px;
-  }
-  .footer__img {
-    margin-bottom: unset;
-  }
-}
 /* ---------- Footer Vender/Contacto ---------- */
-.footer-redes {
+.footer__redes--form {
   margin: 15px auto;
 }
-.footer-redes .red__btn {
+.footer__redes--form .red__btn {
   background-color: rgba(255, 255, 255, 0.384);
 }
 
