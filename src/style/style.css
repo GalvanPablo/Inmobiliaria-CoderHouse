@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -174,6 +175,59 @@ ul, ol {
 }
 
 /* ===================================================== */
+/* ==================== MODAL PROPIEDADES ==================== */
+.modal__propiedades__titulo {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.modal__propiedades__subtitulo {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.modal__propiedades__caracteristicas, .modal__propiedades__servicios {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.modal__propiedades__precio {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.modal__propiedades__precio__expensas {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.modal__propiedades__ubicacion {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #444444;
+}
+.modal__propiedades__ubicacion i {
+  font-size: 1.2em;
+  color: #D59A38;
+}
+.modal__propiedades__ubicacion:hover {
+  color: #D59A38;
+}
+.modal__propiedades__btn {
+  background-color: #444444;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+.modal__propiedades__btn:hover {
+  background-color: #D59A38;
+  box-shadow: none;
+}
+.modal__propiedades__btn:focus {
+  background-color: #D59A38;
+  box-shadow: none;
+}
+.modal__propiedades__descripcion {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* =========================================================== */
 /* ==================== INDEX ==================== */
 /* ---------- Sobre Nosotros ---------- */
 .sobre-nosotros {
@@ -319,6 +373,7 @@ ul, ol {
 }
 /* ---------- Manejo de Propiedades ---------- */
 .propiedad {
+  cursor: pointer;
   box-shadow: 0 2px 3px 0 rgba(42, 42, 42, 0.05);
   background-color: #fff;
   border-radius: 4px;
