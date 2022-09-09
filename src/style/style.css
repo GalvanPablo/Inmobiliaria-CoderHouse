@@ -221,6 +221,17 @@ ul, ol {
   text-align: center;
 }
 
+.donde-encontrarnos {
+  background: rgba(0, 0, 0, 0.0470588235);
+}
+
+.donde-encontrarnos__link {
+  color: #D59A38;
+}
+.donde-encontrarnos__link:hover {
+  color: #d3c3a2;
+}
+
 /* =============================================== */
 /* ==================== PROPIEDADES ==================== */
 .propiedades {

@@ -55,4 +55,16 @@
     }
 }
 
+.donde-encontrarnos{
+    //background: linear-gradient(315deg, $color-gris-claro 0%, #adb5be 74%);
+    background: #0000000c;
+}
+
+.donde-encontrarnos__link{
+    color: $color-principal-destacado;
+    &:hover{
+        color: $color-principal-opaco;
+    }
+}
+
 /* =============================================== */
