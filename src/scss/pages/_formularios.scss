@@ -2,6 +2,7 @@
 %fondo{
     background-color: unset;
     background-size: cover;
+    background-attachment: fixed;
 }
 .content-1{
     @extend %fondo;
@@ -38,6 +39,10 @@
     span, label{
         background-color: #c0c0c0;
         border: 1px solid black;
+    }
+
+    textarea{
+        resize: none;
     }
 
     input, select, textarea{

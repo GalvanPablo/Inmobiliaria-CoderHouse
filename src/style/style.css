@@ -443,6 +443,7 @@ ul, ol {
 .content-2, .content-1 {
   background-color: unset;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .content-1 {
@@ -478,6 +479,9 @@ ul, ol {
 .input-form span, .input-form label {
   background-color: #c0c0c0;
   border: 1px solid black;
+}
+.input-form textarea {
+  resize: none;
 }
 .input-form input, .input-form select, .input-form textarea {
   background-color: rgba(244, 244, 244, 0.8705882353);
